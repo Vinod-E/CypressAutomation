@@ -1,2 +1,4 @@
 *.mp4
 *.png
+*.xls
+cypress/fixtures/loginData.json
