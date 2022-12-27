@@ -9,6 +9,8 @@ export class CRPOLoginPage{
     username_xpath = '[name="loginName"]'
     pasword_xpath = '[type="password"]'
     login_button_xpath = '[ng-click="vm.login()"]'
+    click_username_xpath = '[class="fa fa-fw fa-cog"]'
+    logout_id = '#crpo-settings-logout'
 
 
 
@@ -40,6 +42,15 @@ export class CRPOLoginPage{
 
         cy.get(this.login_button_xpath).click()
 
+    }
+
+    clickUserName(){
+        cy.get(this.click_username_xpath).click()
+    }
+
+    logOut(){
+        cy.get(this.logout_id).click()
+        cy.wait(500)
     }
 
 }
