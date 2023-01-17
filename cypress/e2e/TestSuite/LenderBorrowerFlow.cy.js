@@ -1,7 +1,11 @@
 import { CRPOLogin } from "../TestScripts/CrpoLogin"
+import { CreateUser } from "../TestScripts/createUser"
+import { MakeInterviewerAvailablity } from "../TestScripts/AvailableInterviewer"
 
 //call login page methods
 const loginPage = new CRPOLogin()
+const createUser = new CreateUser()
+const lenderInt = new MakeInterviewerAvailablity()
 
 describe('Lender Flow', function () {
 
@@ -18,12 +22,16 @@ describe('Lender Flow', function () {
             }
         else {
             loginPage.loginDetails(this.login.lender_tenant, this.login.username, this.login.lender_pwd)
-            loginPage.logoutCRPO()
             }
     })
 
-    it('testss', ()=>{
-        console.log('test')
+    it('Create User', ()=>{
+        createUser.userCreation()
+    })
+
+    it('Available Interviewers', ()=>{
+        lenderInt.interviewerAvailablity()
+        loginPage.logoutCRPO()
     })
 })
 

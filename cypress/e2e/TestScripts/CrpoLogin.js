@@ -1,4 +1,4 @@
-import { CRPOLoginPage } from "../pageObjects/LoginPages/LoginPage"
+import { CRPOLoginPage } from "../pageObjects/AllPages/LoginPage"
 // import { Utility } from "../../support/utility"
 
 //Call getBaseUrl() to get environment specific url value
