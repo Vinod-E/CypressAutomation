@@ -18,6 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+require('cypress-xpath')
+
 before(function () {
     cy.fixture('loginData').then(function (login) {
         let env = Cypress.env('ENV')
