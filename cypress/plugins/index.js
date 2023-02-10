@@ -1,19 +1,16 @@
 // cypress/plugins/index.js
 
-const fs = require("fs-extra");
-const path = require("path");
+//Overriding before and after hook
+const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 
-const fetchConfigurationByFile = file => {
-  const pathOfConfigurationFile = `config/cypress.${file}.json`;
+module.exports = (on) => {
+  on('before:run', async (details) => {
+    console.log('override before:run');
+    await beforeRunHook(details);
+  });
 
-  return (
-    file && fs.readJson(path.join(__dirname, "../", pathOfConfigurationFile))
-  );
-};
-
-module.exports = (on, config) => {
-  const environment = config.env.configFile || "development";
-  const configurationForEnvironment = fetchConfigurationByFile(environment);
-
-  return configurationForEnvironment || config;
+  on('after:run', async () => {
+    console.log('override after:run');
+    await afterRunHook();
+  });
 };
