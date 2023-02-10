@@ -10,7 +10,7 @@ const lenderInt = new MakeInterviewerAvailablity()
 describe('Lender Flow', function () {
 
     // URL calling before() under the cypress/support/e2e.js
-    it('Lender CRPO Login', function () {
+    it('Lender CRPO Login', function(){
 
         let env = Cypress.env('ENV')
 
@@ -25,8 +25,9 @@ describe('Lender Flow', function () {
             }
     })
 
-    it('Create User', ()=>{
-        createUser.userCreation()
+    it('User Creation', function(){
+        createUser.userCreation(this.amsuser.name, this.amsuser.email, this.amsuser.location, 
+            this.amsuser.role, this.amsuser.password)
     })
 
     it('Available Interviewers', ()=>{

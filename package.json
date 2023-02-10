@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run:amsin": "cypress run  --env ENV=amsin",
-    "cy:run:beta": "cypress run  --env ENV=beta",
-    "cy:run:ams": "cypress run  --env ENV=ams"
+    "amsin": "cypress run  --env ENV=amsin",
+    "beta": "cypress run  --env ENV=beta",
+    "ams": "cypress run  --env ENV=ams"
   },
   "keywords": [],
   "author": "",
