@@ -12,18 +12,18 @@ const user = new CreateUserPage()
 
 export class CreateUser{
 
-    userCreation(){
+    userCreation(name, mailid, location, role, password){
         configTab.ConfigurationTab()
         configTab.UserManagement()
         user.NewUser()
-        user.UserName('asas')
-        user.UserAlias('asas')
-        user.UserloginName('asasas')
-        user.UserEmail('sassasa@gmail.com')
-        user.UserLocation('Visakhapatnam')
-        user.UserRole('Interviewer')
+        user.UserName(name.concat(new Date().toDateString()))
+        user.UserAlias(nameconcat(new Date().toDateString()))
+        user.UserloginName(name.concat(new Date().toDateString()))
+        user.UserEmail(mailid.concat(new Date().toDateString(), '@gmail.com'))
+        user.UserLocation(location)
+        user.UserRole(role)
         user.ManualPassword()
-        user.EnterPassword('123s')
-        user.ConfirmPassword('123s')
+        user.EnterPassword(password)
+        user.ConfirmPassword(password)
     }
 }

@@ -39,4 +39,8 @@ before(function () {
             cy.visit(this.login.amsin)
         }
     })
+    
+    cy.fixture('userCreationData').then(function (amsuser) {
+        this.amsuser = amsuser
+    })
 })
