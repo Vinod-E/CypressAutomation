@@ -10,16 +10,20 @@ import {CreateUserPage} from "../pageObjects/AllPages/UserCreatePage"
 const configTab = new Menus()
 const user = new CreateUserPage()
 
+var date = new Date().toDateString().replace(/\s/g,'');
+var hour = new Date().getHours();
+var min = new Date().getMinutes();
+
 export class CreateUser{
 
     userCreation(name, mailid, location, role, password){
         configTab.ConfigurationTab()
         configTab.UserManagement()
         user.NewUser()
-        user.UserName(name.concat(new Date().toDateString()))
-        user.UserAlias(nameconcat(new Date().toDateString()))
-        user.UserloginName(name.concat(new Date().toDateString()))
-        user.UserEmail(mailid.concat(new Date().toDateString(), '@gmail.com'))
+        user.UserName(name.concat(date,hour,min))
+        user.UserAlias(name.concat(date,hour,min))
+        user.UserloginName(name.concat(date,hour,min))
+        user.UserEmail(mailid.concat(date,hour,min, '@gmail.com'))
         user.UserLocation(location)
         user.UserRole(role)
         user.ManualPassword()

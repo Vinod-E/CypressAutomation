@@ -1,4 +1,8 @@
 /// <reference types="cypress"/>
+import {CommonLoadingPage} from "../LoadingPages/LoadingPage"
+
+//call pageObject methods
+const load = new CommonLoadingPage()
 
 export class CRPOLoginPage{
 
@@ -21,13 +25,15 @@ export class CRPOLoginPage{
     }
 
     nextToTenant(){
-
+        
         cy.get(this.next_button_xpath).should('be.visible').click()
+        
 
     }
 
     userName(loginName){
 
+        load.UIPageCRPO()
         cy.get(this.username_xpath).type(loginName)
 
     }
