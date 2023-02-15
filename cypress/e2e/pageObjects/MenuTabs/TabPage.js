@@ -1,4 +1,8 @@
 /// <reference types="cypress"/>
+import {CommonLoadingPage} from "../LoadingPages/LoadingPage"
+
+//call pageObject methods
+const load = new CommonLoadingPage()
 
 export class Menus{
 
@@ -22,5 +26,6 @@ export class Menus{
     }
     AvailableInterviewers(){
         cy.xpath(this.int_available_xapth).click()
+        load.UIPageCRPO()
     }
 }

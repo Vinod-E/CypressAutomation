@@ -10,11 +10,12 @@
     "ams": "cypress run  --env ENV=ams"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eraganaboina Vinod Kumar",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.3.0",
     "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-wait-until": "^1.7.2",
     "cypress-xpath": "^2.0.1",
     "node-xlsx": "^0.21.0"
   },

@@ -1,5 +1,10 @@
 /// <reference types="cypress"/>
 
+import {CommonLoadingPage} from "../LoadingPages/LoadingPage"
+
+//call pageObject methods
+const load = new CommonLoadingPage()
+
 export class CreateUserPage{
 
 
@@ -23,10 +28,10 @@ export class CreateUserPage{
 
     NewUser(){
         cy.get(this.new_user_xpath).click()
+        load.UIPageCRPO()
     }
 
     UserName(name){
-        cy.wait(3000)
         cy.get(this.user_name_xpath).type(name)
     }
 
