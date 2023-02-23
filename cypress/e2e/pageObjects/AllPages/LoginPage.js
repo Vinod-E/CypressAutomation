@@ -26,14 +26,14 @@ export class CRPOLoginPage{
 
     nextToTenant(){
         
-        cy.get(this.next_button_xpath).should('be.visible').click()
+        cy.get(this.next_button_xpath).click()
+        load.UIPageCRPO()
         
 
     }
 
     userName(loginName){
 
-        load.UIPageCRPO()
         cy.get(this.username_xpath).type(loginName)
 
     }
@@ -47,6 +47,7 @@ export class CRPOLoginPage{
     clickSubmit(){
 
         cy.get(this.login_button_xpath).click()
+        load.UIPageCRPO()
 
     }
 
