@@ -23,22 +23,6 @@ import 'cypress-mochawesome-reporter/register';
 require('cypress-xpath')
 
 before(function () {
-    cy.fixture('loginData').then(function (login) {
-        let env = Cypress.env('ENV')
-        this.login = login
-        if (env == 'amsin'){
-            cy.visit(this.login.amsin)
-        }
-        else if (env == 'ams'){
-            cy.visit(this.login.ams)
-        }
-        else if (env == 'beta'){
-            cy.visit(this.login.beta)
-        }
-        else{
-            cy.visit(this.login.amsin)
-        }
-    })
     
     cy.fixture('userCreationData').then(function (amsuser) {
         this.amsuser = amsuser
