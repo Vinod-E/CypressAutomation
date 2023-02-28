@@ -22,9 +22,9 @@ import 'cypress-mochawesome-reporter/register';
 
 require('cypress-xpath')
 
-before(function () {
+// before(function () {
     
-    cy.fixture('userCreationData').then(function (amsuser) {
-        this.amsuser = amsuser
-    })
-})
+//     cy.fixture('userCreationData').then(function (amsuser) {
+//         this.amsuser = amsuser
+//     })
+// })
