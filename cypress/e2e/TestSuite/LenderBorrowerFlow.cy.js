@@ -2,25 +2,28 @@ import { CRPOLogin } from "../TestScripts/CrpoLogin"
 import { CreateUser } from "../TestScripts/createUser"
 import { MakeInterviewerAvailablity } from "../TestScripts/AvailableInterviewer"
 
-//call login page methods
+//Create an instance for import classes
 const loginPage = new CRPOLogin()
 const createUser = new CreateUser()
 const lenderInt = new MakeInterviewerAvailablity()
 
+
 describe('Lender Flow', function () {
 
-    it('Lender CRPO Login', function(){
+    it('Lender CRPO Login', ()=> {
         loginPage.loginEnvironment('lender')
     })
 
-    // amsuser calling before() under the cypress/support/e2e.js
-    it('User Creation', function(){
-        createUser.userCreation(this.amsuser.name, this.amsuser.email, this.amsuser.location, 
-            this.amsuser.role, this.amsuser.password)
+    it('User Creation', ()=> {
+        createUser.userCreation()
     })
 
-    it('Available Interviewers', ()=>{
+    it('Available Interviewers', ()=> {
         lenderInt.interviewerAvailablity()
+    })
+
+    it('Mark Tenant Preferences', ()=> {
+        lenderInt.markPreference()
         loginPage.logoutCRPO()
     })
 })
@@ -28,7 +31,8 @@ describe('Lender Flow', function () {
 
 describe('Borrower Flow', function () {
 
-    it('Borrower CRPO Login', function () {
+    it('Borrower CRPO Login', ()=> {
         loginPage.loginEnvironment('Borrower')
+        loginPage.logoutCRPO()
     })
 })

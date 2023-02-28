@@ -1,4 +1,5 @@
-import { Menus } from "../pageObjects/MenuTabs/TabPage"
+import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
+import { ConfigTabs } from "../pageObjects/MenuTabs/ConfigurationTabPage"
 import {CreateUserPage} from "../pageObjects/AllPages/UserCreatePage"
 // import { Utility } from "../../support/utility"
 
@@ -7,7 +8,8 @@ import {CreateUserPage} from "../pageObjects/AllPages/UserCreatePage"
 // const url = new Utility().getTestUrl();  //testing to Debug
 
 //call pageObject methods
-const configTab = new Menus()
+const configTab = new ConfigTabs()
+const MenuTabs = new MainTab()
 const user = new CreateUserPage()
 
 var date = new Date().toDateString().replace(/\s/g,'');
@@ -16,18 +18,24 @@ var min = new Date().getMinutes();
 
 export class CreateUser{
 
-    userCreation(name, mailid, location, role, password){
-        configTab.ConfigurationTab()
-        configTab.UserManagement()
-        user.NewUser()
-        user.UserName(name.concat(date,hour,min))
-        user.UserAlias(name.concat(date,hour,min))
-        user.UserloginName(name.concat(date,hour,min))
-        user.UserEmail(mailid.concat(date,hour,min, '@gmail.com'))
-        user.UserLocation(location)
-        user.UserRole(role)
-        user.ManualPassword()
-        user.EnterPassword(password)
-        user.ConfirmPassword(password)
+    userCreation(){
+        
+        cy.fixture('userCreationData').then(function (amsuser) {
+            this.amsuser = amsuser
+
+            MenuTabs.moreTab()
+            configTab.ConfigurationTab()
+            configTab.UserManagement()
+            user.NewUser()
+            user.UserName(this.amsuser.name.concat(date,hour,min))
+            user.UserAlias(this.amsuser.name.concat(date,hour,min))
+            user.UserloginName(this.amsuser.name.concat(date,hour,min))
+            user.UserEmail(this.amsuser.email.concat(date,hour,min, '@gmail.com'))
+            user.UserLocation(this.amsuser.location)
+            user.UserRole(this.amsuser.role)
+            user.ManualPassword()
+            user.EnterPassword(this.amsuser.password)
+            user.ConfirmPassword(this.amsuser.password)
+        })
     }
 }

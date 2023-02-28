@@ -9,6 +9,9 @@ export class UserAvailabilityPage{
     validate_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[1]'
     create_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[2]'
     close_class = '.close'
+    mark_tenant_id = '#cardlist-view-Mark-Preference'
+    tenant_filed_xpath = '[ng-model="vm.data.tenantAlias"]'
+    mark_class = '.btn.btn-primary.btn-sm'
 
 
     NewAvailableInterviewers(){
@@ -25,6 +28,15 @@ export class UserAvailabilityPage{
     }
     Close(){
         cy.get(this.close_class).click()
+    }
+    markPreference(){
+        cy.get(this.mark_tenant_id).click()
+    }
+    TenantAlias(tenant){
+        cy.get(this.tenant_filed_xpath).type(tenant)
+    }
+    mark(){
+        cy.get(this.mark_class).click()
     }
 
 }
