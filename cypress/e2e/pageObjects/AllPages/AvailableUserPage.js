@@ -38,5 +38,8 @@ export class UserAvailabilityPage{
     mark(){
         cy.get(this.mark_class).click()
     }
+    close_preference_window(){
+        cy.get('.btn-danger').click()
+    }
 
 }

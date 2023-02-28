@@ -18,11 +18,12 @@ export class CreateUserPage{
     user_role_xapth = 'span[title="Role"]'
     enter_role_xpath = 'input[ng-change="vm.leftFilterChanged(vm.filterLeft)"]'
     select_role_xapth = '//*[@title="Interviewer"]'
-    move_selection_xpath = 'button[data-ng-click="vm.moveSelectedItemsRight();"]'
+    move_selection_xpath = 'button[data-ng-click="vm.moveAllItemsRight();"]'
     done_selection_xpath = '//*[@ng-click="$hide();"]'
     manual_password_xpath = '//*[@id="mainBodyElement"]/div[3]/section/div/div/div[3]/div/div/div/div/label[2]'
     password_xpath = '[ng-model="vm.data.password"]'
     confirm_password_xapth = '[ng-model="vm.confirmPassword"]'
+    create_xpath = 'button[ng-click="vm.saveUser()"]'
 
 
 
@@ -49,14 +50,12 @@ export class CreateUserPage{
 
     UserLocation(location){
         cy.get(this.user_location_xpath).type(location)
-        cy.get(this.user_location_xpath).type('{enter}')
+        cy.get('[title="Visakhapatnam"]').trigger('mousemove').click()
     }
 
     UserRole(role){
         cy.get(this.user_role_xapth).click({force:true})
         cy.get(this.enter_role_xpath).type(role)
-        cy.wait(2000)
-        // cy.xpath(this.select_role_xapth).click()
         cy.get(this.move_selection_xpath).click()
         cy.xpath(this.done_selection_xpath).click()
     }
@@ -71,5 +70,10 @@ export class CreateUserPage{
 
     ConfirmPassword(confirmPassword){
         cy.get(this.confirm_password_xapth).type(confirmPassword)
+    }
+
+    createButton(){
+        cy.get(this.create_xpath).click()
+        load.UIPageCRPO()
     }
 }
