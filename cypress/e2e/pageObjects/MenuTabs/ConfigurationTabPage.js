@@ -11,6 +11,7 @@ export class ConfigTabs{
     config_tab_xpath = '[ui-sref="crpo.configuration"]'
     userManagement_xpath = ':nth-child(1) > .panel'
     int_available_xapth = '//span[@title="Available Interviewers"]'
+    borrower_int_xapth = '//span[@title="Borrower Interviewers"]'
 
 
     ConfigurationTab(){
@@ -23,6 +24,11 @@ export class ConfigTabs{
 
     AvailableInterviewers(){
         cy.xpath(this.int_available_xapth).click()
+        load.UIPageCRPO()
+    }
+
+    BorrowerInterviewers(){
+        cy.xpath(this.borrower_int_xapth).click()
         load.UIPageCRPO()
     }
 }
