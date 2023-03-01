@@ -9,9 +9,11 @@ export class UserAvailabilityPage{
     validate_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[1]'
     create_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[2]'
     close_class = '.close'
+    manage_slot_id = '#cardlist-view-Manage-Slots'
     mark_tenant_id = '#cardlist-view-Mark-Preference'
     tenant_filed_xpath = '[ng-model="vm.data.tenantAlias"]'
     mark_class = '.btn.btn-primary.btn-sm'
+    close_window_class = '.btn-danger'
 
 
     NewAvailableInterviewers(){
@@ -35,11 +37,14 @@ export class UserAvailabilityPage{
     TenantAlias(tenant){
         cy.get(this.tenant_filed_xpath).type(tenant)
     }
+    slot(){
+        cy.get(this.manage_slot_id).click()
+    }
     mark(){
         cy.get(this.mark_class).click()
     }
     close_preference_window(){
-        cy.get('.btn-danger').click()
+        cy.get(this.close_window_class).click()
     }
 
 }

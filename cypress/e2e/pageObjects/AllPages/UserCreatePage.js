@@ -15,8 +15,9 @@ export class CreateUserPage{
     user_login_name_xapth = '[name="userLogInName"]'
     user_email_xapth = '[name="email"]'
     user_location_xpath = 'input[placeholder="Location"]'
+    user_skill_xpath = 'span[title="Skills"]'
     user_role_xapth = 'span[title="Role"]'
-    enter_role_xpath = 'input[ng-change="vm.leftFilterChanged(vm.filterLeft)"]'
+    enter_multiple_value_xpath = 'input[ng-change="vm.leftFilterChanged(vm.filterLeft)"]'
     select_role_xapth = '//*[@title="Interviewer"]'
     move_selection_xpath = 'button[data-ng-click="vm.moveAllItemsRight();"]'
     done_selection_xpath = '//*[@ng-click="$hide();"]'
@@ -55,7 +56,16 @@ export class CreateUserPage{
 
     UserRole(role){
         cy.get(this.user_role_xapth).click({force:true})
-        cy.get(this.enter_role_xpath).type(role)
+        cy.get(this.enter_multiple_value_xpath).type(role)
+        cy.get(this.move_selection_xpath).click()
+        cy.xpath(this.done_selection_xpath).click()
+    }
+
+    UserSkills(skill1, skill2){
+        cy.get(this.user_skill_xpath).click({force:true})
+        cy.get(this.enter_multiple_value_xpath).type(skill1)
+        cy.get(this.move_selection_xpath).click()
+        cy.get(this.enter_multiple_value_xpath).type(skill2)
         cy.get(this.move_selection_xpath).click()
         cy.xpath(this.done_selection_xpath).click()
     }
