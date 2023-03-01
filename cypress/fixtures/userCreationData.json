@@ -4,7 +4,9 @@
     "role": "Interviewer",
     "location": "Visakhapatnam",
     "password": "automation",
-    "email": "s1n1j1e1v1"
+    "email": "s1n1j1e1v1",
+    "skill1": "JavaScript",
+    "skill2": "Python"
 
 }
     

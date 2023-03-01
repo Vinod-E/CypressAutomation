@@ -27,6 +27,10 @@ describe('Lender Flow', function () {
 
     it('Mark Tenant Preferences', ()=> {
         lenderInt.markPreference()
+    })
+
+    it('Manage Interviewer Slots', ()=> {
+        lenderInt.manageSlots()
         loginPage.logoutCRPO()
     })
 })

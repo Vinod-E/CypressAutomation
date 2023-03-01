@@ -16,9 +16,11 @@ const user = new CreateUserPage()
 const search = new AdvanceSearch()
 const notifier = new uiNotifier()
 
-var date = new Date().toDateString().replace(/\s/g,'');
-var hour = new Date().getHours();
-var min = new Date().getMinutes();
+// date and time 
+let objectDate = new Date();
+let date = objectDate.toDateString().replace(/\s/g,'');
+let hour = objectDate.getHours();
+let min = objectDate.getMinutes();
 
 export class CreateUser{
 
@@ -26,8 +28,8 @@ export class CreateUser{
         
         cy.fixture('userCreationData').then(function (amsuser) {
             this.amsuser = amsuser
-            var name = this.amsuser.name.concat(date,hour,min)
-            var email = this.amsuser.email.concat(date,hour,min, '@gmail.com')
+            let name = this.amsuser.name.concat(date,hour,min)
+            let email = this.amsuser.email.concat(date,hour,min, '@gmail.com')
 
             MenuTabs.moreTab()
             configTab.ConfigurationTab()
@@ -39,6 +41,7 @@ export class CreateUser{
             user.UserEmail(email)
             user.UserLocation(this.amsuser.location)
             user.UserRole(this.amsuser.role)
+            user.UserSkills(this.amsuser.skill1, this.amsuser.skill2)
             user.ManualPassword()
             user.EnterPassword(this.amsuser.password)
             user.ConfirmPassword(this.amsuser.password)
@@ -50,7 +53,7 @@ export class CreateUser{
     userSearch(){
         cy.fixture('userCreationData').then(function (amsuser) {
             this.amsuser = amsuser
-            var email = this.amsuser.email.concat(date,hour)
+            let email = this.amsuser.email.concat(date,hour)
 
             search.Filter()
             search.UserEmail(email)
