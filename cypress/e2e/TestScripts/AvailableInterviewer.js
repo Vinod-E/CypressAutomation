@@ -23,6 +23,7 @@ let min = objectDate.getMinutes().toString().padStart(2, "0");
 let day = objectDate.getDate().toString().padStart(2, "0");
 let month = (objectDate.getMonth() + 1).toString().padStart(2, "0");
 let year = objectDate.getFullYear();
+let Todaydate = day + "/" + month + "/" + year
 
 
 export class MakeInterviewerAvailablity{
@@ -67,8 +68,8 @@ export class MakeInterviewerAvailablity{
 
         checkbox.select_all_checkbox()
         interviewer.slot()
-        slot.fromDate(day + "/" + month + "/" + year)
-        slot.toDate(day + "/" + month + "/" + year)
+        slot.fromDate(Todaydate)
+        slot.toDate(Todaydate)
         slot.fromTime(hour + ":" + min)
         slot.toTime((hour+4) + ":" + min)
         slot.slots_generation()
