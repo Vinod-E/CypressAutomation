@@ -48,7 +48,7 @@ export class ManageSlotPage{
         cy.get('.chip-total-count.available-count-color').then(($value) => {
             this.textValue = $value.text()
             if (this.textValue == '3'){
-                console.log('Slot Count = ', this.textValue)
+                cy.log('Slot Count = ', this.textValue)
             }
             else return;
         })
