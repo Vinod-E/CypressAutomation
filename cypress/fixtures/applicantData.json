@@ -3,7 +3,10 @@
     "Eventname": "Borrower_Flow_Event",
     "schedule_message": "Interview Scheduled Successfully",
     "skill1": "JavaScript",
-    "skill2": "Python"
+    "skill2": "Python",
+    "stage": "First Interview",
+    "status": "Awaited",
+    "comment": "Interview Schedule to Lender Interviewer"
 
 }
     

@@ -12,7 +12,7 @@ const borrowerInt = new BorrowerInterviewer()
 const applicant = new Applicant()
 
 
-describe.skip('Lender Flow', function () {
+describe('Lender Flow', function () {
 
     it('Lender CRPO Login', ()=> {
         loginPage.loginEnvironment('lender')
@@ -62,6 +62,10 @@ describe('Schedule To Interview', function () {
 
     it('Event Applicants', ()=> {
         applicant.eventApplicant()
+    })
+
+    it('Applicant Status Change', ()=> {
+        applicant.StatusChange()
     })
 
     it('Slots Search TO Schedule', ()=> {

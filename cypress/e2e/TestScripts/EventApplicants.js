@@ -1,6 +1,7 @@
 import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
 import { AdvanceSearch } from "../pageObjects/CommonPages/AdvanceSearchPage"
 import { EventApplicantPage } from "../pageObjects/AllPages/EventApplicantsPage"
+import { ChangeStatus } from "../pageObjects/AllPages/ApplicantStatusChangePage"
 import { AllCheckBoxPage } from "../pageObjects/CommonPages/CheckBoxPage"
 import { uiNotifier } from "../pageObjects/CommonPages/dismissNotifieronpage"
 
@@ -11,6 +12,7 @@ const search = new AdvanceSearch()
 const applicant = new EventApplicantPage()
 const checkbox = new AllCheckBoxPage()
 const notifier = new uiNotifier()
+const status = new ChangeStatus()
 
 
 let objectDate = new Date();
@@ -32,6 +34,21 @@ export class Applicant{
             search.event_name(candidate.Eventname)
             search.button_search()
             applicant.viewCandidates()
+        })
+    }
+
+    StatusChange(){
+
+        cy.fixture('applicantData').then(function(appli){
+
+            checkbox.select_all_checkbox()
+            status.moreActions()
+            status.changeStatusAction()
+            status.stage_selection(appli.stage)
+            status.status_selection(appli.status)
+            status.comment(appli.comment)
+            status.change()
+            notifier.dismiss_notifier()
         })
     }
 
