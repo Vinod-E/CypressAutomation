@@ -28,7 +28,7 @@ export class CreateUser{
         
         cy.fixture('userCreationData').then(function (amsuser) {
             this.amsuser = amsuser
-            let name = this.amsuser.name.concat(date,hour,min)
+            let name = this.amsuser.name.concat(date)
             let email = this.amsuser.email.concat(date,hour,min, '@gmail.com')
 
             MenuTabs.moreTab()

@@ -1,15 +1,19 @@
 import { CRPOLogin } from "../TestScripts/CrpoLogin"
+import { IntLogin } from "../TestScripts/IntLogin"
 import { CreateUser } from "../TestScripts/createUser"
 import { MakeInterviewerAvailablity } from "../TestScripts/AvailableInterviewer"
 import { BorrowerInterviewer } from "../TestScripts/BorrowerInterviewers"
 import { Applicant } from "../TestScripts/EventApplicants"
+import { InterviewerFeedback } from "../TestScripts/BorrowInterviewerFeedback"
 
 //Create an instance for import classes
 const loginPage = new CRPOLogin()
+const intlogin = new IntLogin()
 const createUser = new CreateUser()
 const lenderInt = new MakeInterviewerAvailablity()
 const borrowerInt = new BorrowerInterviewer()
 const applicant = new Applicant()
+const feedback = new InterviewerFeedback()
 
 
 describe('Lender Flow', function () {
@@ -75,5 +79,13 @@ describe('Schedule To Interview', function () {
     it('Schedule Applicant TO Interview', ()=> {
         applicant.Schedule()
         loginPage.logoutCRPO()
+    })
+})
+
+describe.only('Feedback By Borrower', function () {
+
+    it('Lender CRPO Interviewer Login', ()=> {
+        intlogin.loginEnvironment('lender')
+        feedback.feedback()
     })
 })

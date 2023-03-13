@@ -7,6 +7,8 @@ export class CommonLoadingPage {
     // ******* -------- Locator Variables -------- *******
     loading_class = '.dw-loading-active'
     loading_text_class = '.dw-loading-text'
+    click_username_xpath = '[class="fa fa-fw fa-cog"]'
+    force_refresh_id = '#crpo-settings-force-refresh'
 
 
     UIPageCRPO(){
@@ -32,4 +34,16 @@ export class CommonLoadingPage {
             // }
             // else return;
         }
+
+    force_refresh_user(){
+        cy.get(this.click_username_xpath).click()
+        cy.get(this.force_refresh_id).click()
+        this.UIPageCRPO()
     }
+
+    page_reload(){
+        cy.reload()
+        load.UIPageCRPO()
+    }
+    
+}
