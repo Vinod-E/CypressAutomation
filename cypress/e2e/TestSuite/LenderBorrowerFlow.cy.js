@@ -82,10 +82,13 @@ describe('Schedule To Interview', function () {
     })
 })
 
-describe.only('Feedback By Borrower', function () {
+describe('Lender Interviewer Feedback', function () {
 
-    it('Lender CRPO Interviewer Login', ()=> {
+    it('Lender Interviewer Login', ()=> {
         intlogin.loginEnvironment('lender')
+    })
+
+    it('Lender Provide Feedback', ()=> {
         feedback.feedback()
     })
 })

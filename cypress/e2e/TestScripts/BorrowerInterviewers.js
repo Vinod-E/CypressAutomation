@@ -26,6 +26,7 @@ export class BorrowerInterviewer{
         cy.fixture('userCreationData').then(function(user){
             let email = user.email.concat(date)
 
+            cy.wait(4000)
             MenuTabs.moreTab()
             configTab.ConfigurationTab()
             configTab.BorrowerInterviewers()
