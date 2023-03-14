@@ -13,9 +13,7 @@ export class IntLogin{
     loginEnvironment(type){
         cy.fixture('loginData').then(function (login) {
 
-            // let name = login.int_username.concat(date)
-            let name = 'automateWedMar082023'
-
+            let name = login.int_username.concat(date)
             let env = Cypress.env('ENV')
 
             this.details = new IntLogin() // Current class instance
@@ -56,6 +54,32 @@ export class IntLogin{
                     return
                 }
             }
+        })
+    }
+
+
+    lender_feedback_link(id){
+        cy.fixture('loginData').then(function (feedback) {
+
+            let env = Cypress.env('ENV')
+
+            if (env == 'amsin'){
+
+                cy.visit(feedback.qa_feedback_url.concat(id, feedback.submit_feed_link))
+            }
+            else if (env == 'beta'){
+
+                cy.visit(feedback.beta_feedback_url.concat(id, feedback.submit_feed_link))
+            }
+            else if (env == 'ams'){
+
+                cy.visit(feedback.live_feedback_url.concat(id, feedback.submit_feed_link))
+            }
+            else{
+
+                cy.visit(feedback.qa_feedback_url.concat(id, feedback.submit_feed_link))
+            }
+
         })
     }
 
