@@ -30,6 +30,7 @@ export class Applicant{
         cy.fixture('applicantData').then(function(candidate){
 
             MenuTabs.eventTab()
+            cy.wait(3000)
             search.Filter()
             search.event_name(candidate.Eventname)
             search.button_search()

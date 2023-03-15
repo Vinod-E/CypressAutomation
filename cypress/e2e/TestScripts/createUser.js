@@ -20,7 +20,7 @@ const notifier = new uiNotifier()
 let objectDate = new Date();
 let date = objectDate.toDateString().replace(/\s/g,'');
 let hour = objectDate.getHours();
-let min = objectDate.getMinutes();
+let min = objectDate.getMinutes().toString().padStart(2, "0");
 
 export class CreateUser{
 
@@ -53,10 +53,11 @@ export class CreateUser{
     userSearch(){
         cy.fixture('userCreationData').then(function (amsuser) {
             this.amsuser = amsuser
-            let email = this.amsuser.email.concat(date,hour)
+            let email = this.amsuser.email.concat(date)
 
             search.Filter()
             search.UserEmail(email)
+            cy.wait(3000)
             search.button_search()
         })
     }

@@ -37,6 +37,9 @@ describe('Lender Flow', function () {
 
     it('Manage Interviewer Slots', ()=> {
         lenderInt.manageSlots()
+    })
+
+    it('Logged Out from Lender', ()=> {
         loginPage.logoutCRPO()
     })
 })
@@ -78,6 +81,9 @@ describe('Schedule To Interview', function () {
 
     it('Schedule Applicant TO Interview', ()=> {
         applicant.Schedule()
+    })
+
+    it('Logged Out from Borrower', ()=> {
         loginPage.logoutCRPO()
     })
 })
@@ -90,5 +96,9 @@ describe('Lender Interviewer Feedback', function () {
 
     it('Lender Provide Feedback', ()=> {
         feedback.feedback()
+    })
+
+    it('Logged Out from Lender Interview', ()=> {
+        loginPage.logoutCRPO()
     })
 })
