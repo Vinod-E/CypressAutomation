@@ -19,11 +19,13 @@ export class BorrowerUserPage{
     ViewSkills(){
         cy.get(this.view_skills_id).click()
         load.UIPageCRPO()
+        cy.wait(2000)
     }
 
     ViewSlots(){
         cy.get(this.view_slots_id).click()
         load.UIPageCRPO()
+        cy.wait(2000)
     }
 
     skills(skill1 , skill2){

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "amsin": "cypress run  --env ENV=amsin",
-    "beta": "cypress run  --env ENV=beta",
-    "ams": "cypress run  --env ENV=ams"
+    "amsin": "cypress run  --env ENV=amsin  --browser chrome",
+    "beta": "cypress run  --env ENV=beta  --browser chrome",
+    "ams": "cypress run  --env ENV=ams  --browser chrome"
   },
   "keywords": [],
   "author": "Eraganaboina Vinod Kumar",
