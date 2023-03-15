@@ -1,8 +1,8 @@
-import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
-import { ConfigTabs } from "../pageObjects/MenuTabs/ConfigurationTabPage"
-import { AdvanceSearch } from "../pageObjects/CommonPages/AdvanceSearchPage"
-import { AllCheckBoxPage } from "../pageObjects/CommonPages/CheckBoxPage"
-import { BorrowerUserPage } from "../pageObjects/AllPages/BorrowerUsersPage"
+import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
+import { ConfigTabs } from "../../pageObjects/MenuTabs/ConfigurationTabPage"
+import { AdvanceSearch } from "../../pageObjects/CommonPages/AdvanceSearchPage"
+import { AllCheckBoxPage } from "../../pageObjects/CommonPages/CheckBoxPage"
+import { BorrowerUserPage } from "../../pageObjects/AllPages/BorrowerUsersPage"
 
 //call pageObject methods
 const MenuTabs = new MainTab()

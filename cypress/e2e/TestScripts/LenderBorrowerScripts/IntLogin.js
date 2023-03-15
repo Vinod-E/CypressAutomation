@@ -1,4 +1,4 @@
-import { CRPOLoginPage } from "../pageObjects/AllPages/LoginPage"
+import { CRPOLoginPage } from "../../pageObjects/AllPages/LoginPage"
 
 //call login page methods
 const loginPage = new CRPOLoginPage()

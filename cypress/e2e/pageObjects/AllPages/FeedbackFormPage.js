@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 import {CommonLoadingPage} from "../LoadingPages/LoadingPage"
-import {IntLogin} from "../../TestScripts/IntLogin"
+import {IntLogin} from "../../TestScripts/LenderBorrowerScripts/IntLogin"
 
 //call pageObject methods
 const load = new CommonLoadingPage()

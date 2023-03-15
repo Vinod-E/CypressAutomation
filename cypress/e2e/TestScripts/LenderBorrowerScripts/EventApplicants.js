@@ -1,9 +1,9 @@
-import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
-import { AdvanceSearch } from "../pageObjects/CommonPages/AdvanceSearchPage"
-import { EventApplicantPage } from "../pageObjects/AllPages/EventApplicantsPage"
-import { ChangeStatus } from "../pageObjects/AllPages/ApplicantStatusChangePage"
-import { AllCheckBoxPage } from "../pageObjects/CommonPages/CheckBoxPage"
-import { uiNotifier } from "../pageObjects/CommonPages/dismissNotifieronpage"
+import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
+import { AdvanceSearch } from "../../pageObjects/CommonPages/AdvanceSearchPage"
+import { EventApplicantPage } from "../../pageObjects/AllPages/EventApplicantsPage"
+import { ChangeStatus } from "../../pageObjects/AllPages/ApplicantStatusChangePage"
+import { AllCheckBoxPage } from "../../pageObjects/CommonPages/CheckBoxPage"
+import { uiNotifier } from "../../pageObjects/CommonPages/dismissNotifieronpage"
 
 
 //call pageObject methods

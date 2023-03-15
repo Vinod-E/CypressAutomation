@@ -1,10 +1,10 @@
-import { CRPOLogin } from "../TestScripts/CrpoLogin"
-import { IntLogin } from "../TestScripts/IntLogin"
-import { CreateUser } from "../TestScripts/createUser"
-import { MakeInterviewerAvailablity } from "../TestScripts/AvailableInterviewer"
-import { BorrowerInterviewer } from "../TestScripts/BorrowerInterviewers"
-import { Applicant } from "../TestScripts/EventApplicants"
-import { InterviewerFeedback } from "../TestScripts/BorrowInterviewerFeedback"
+import { CRPOLogin } from "../TestScripts/LenderBorrowerScripts/CrpoLogin"
+import { IntLogin } from "../TestScripts/LenderBorrowerScripts/IntLogin"
+import { CreateUser } from "../TestScripts/LenderBorrowerScripts/createUser"
+import { MakeInterviewerAvailablity } from "../TestScripts/LenderBorrowerScripts/AvailableInterviewer"
+import { BorrowerInterviewer } from "../TestScripts/LenderBorrowerScripts/BorrowerInterviewers"
+import { Applicant } from "../TestScripts/LenderBorrowerScripts/EventApplicants"
+import { InterviewerFeedback } from "../TestScripts/LenderBorrowerScripts/BorrowInterviewerFeedback"
 
 //Create an instance for import classes
 const loginPage = new CRPOLogin()

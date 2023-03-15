@@ -1,8 +1,8 @@
-import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
-import { ConfigTabs } from "../pageObjects/MenuTabs/ConfigurationTabPage"
-import {CreateUserPage} from "../pageObjects/AllPages/UserCreatePage"
-import { AdvanceSearch } from "../pageObjects/CommonPages/AdvanceSearchPage"
-import { uiNotifier } from "../pageObjects/CommonPages/dismissNotifieronpage"
+import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
+import { ConfigTabs } from "../../pageObjects/MenuTabs/ConfigurationTabPage"
+import {CreateUserPage} from "../../pageObjects/AllPages/UserCreatePage"
+import { AdvanceSearch } from "../../pageObjects/CommonPages/AdvanceSearchPage"
+import { uiNotifier } from "../../pageObjects/CommonPages/dismissNotifieronpage"
 // import { Utility } from "../../support/utility"
 
 //Call getBaseUrl() to get environment specific url value
