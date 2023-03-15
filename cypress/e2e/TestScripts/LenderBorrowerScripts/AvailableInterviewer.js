@@ -1,10 +1,10 @@
-import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
-import { ConfigTabs } from "../pageObjects/MenuTabs/ConfigurationTabPage"
-import { AdvanceSearch } from "../pageObjects/CommonPages/AdvanceSearchPage"
-import { UserAvailabilityPage } from "../pageObjects/AllPages/AvailableUserPage"
-import { AllCheckBoxPage } from "../pageObjects/CommonPages/CheckBoxPage"
-import { uiNotifier } from "../pageObjects/CommonPages/dismissNotifieronpage"
-import { ManageSlotPage } from "../pageObjects/AllPages/manageSlotspage"
+import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
+import { ConfigTabs } from "../../pageObjects/MenuTabs/ConfigurationTabPage"
+import { AdvanceSearch } from "../../pageObjects/CommonPages/AdvanceSearchPage"
+import { UserAvailabilityPage } from "../../pageObjects/AllPages/AvailableUserPage"
+import { AllCheckBoxPage } from "../../pageObjects/CommonPages/CheckBoxPage"
+import { uiNotifier } from "../../pageObjects/CommonPages/dismissNotifieronpage"
+import { ManageSlotPage } from "../../pageObjects/AllPages/manageSlotspage"
 
 //call pageObject methods
 const MenuTabs = new MainTab()

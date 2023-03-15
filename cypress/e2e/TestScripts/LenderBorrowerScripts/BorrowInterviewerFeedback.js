@@ -1,7 +1,7 @@
-import { MainTab } from "../pageObjects/MenuTabs/MainTabsPage"
-import { AllCheckBoxPage } from "../pageObjects/CommonPages/CheckBoxPage"
-import { FeedbackPage } from "../pageObjects/AllPages/FeedbackFormPage"
-import { uiNotifier } from "../pageObjects/CommonPages/dismissNotifieronpage"
+import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
+import { AllCheckBoxPage } from "../../pageObjects/CommonPages/CheckBoxPage"
+import { FeedbackPage } from "../../pageObjects/AllPages/FeedbackFormPage"
+import { uiNotifier } from "../../pageObjects/CommonPages/dismissNotifieronpage"
 
 //call pageObject methods
 const MenuTabs = new MainTab()
