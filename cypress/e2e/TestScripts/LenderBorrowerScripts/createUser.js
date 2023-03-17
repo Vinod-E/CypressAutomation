@@ -26,7 +26,7 @@ export class CreateUser{
 
     userCreation(){
         
-        cy.fixture('userCreationData').then(function (amsuser) {
+        cy.fixture('LBData/userCreationData.json').then(function (amsuser) {
             this.amsuser = amsuser
             let name = this.amsuser.name.concat(date)
             let email = this.amsuser.email.concat(date,hour,min, '@gmail.com')
@@ -51,7 +51,7 @@ export class CreateUser{
     }
 
     userSearch(){
-        cy.fixture('userCreationData').then(function (amsuser) {
+        cy.fixture('LBData/userCreationData.json').then(function (amsuser) {
             this.amsuser = amsuser
             let email = this.amsuser.email.concat(date)
 

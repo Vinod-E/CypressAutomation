@@ -23,7 +23,7 @@ export class BorrowerInterviewer{
 
     interviewerAsBorrower(){
 
-        cy.fixture('userCreationData').then(function(user){
+        cy.fixture('LBData/userCreationData.json').then(function(user){
             let email = user.email.concat(date)
 
             cy.wait(4000)
@@ -38,7 +38,7 @@ export class BorrowerInterviewer{
 
     BorrowerSkills(){
 
-        cy.fixture('userCreationData').then(function(user){
+        cy.fixture('LBData/userCreationData.json').then(function(user){
             
             checkbox.select_all_checkbox()
             borrower.ViewSkills()

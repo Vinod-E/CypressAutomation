@@ -15,6 +15,8 @@ export class CRPOLoginPage{
     login_button_xpath = '[ng-click="vm.login()"]'
     click_username_xpath = '[class="fa fa-fw fa-cog"]'
     logout_id = '#crpo-settings-logout'
+    otp_field_class = 'form.ng-pristine > :nth-child(2) > .form-control'
+    verify_button_class = '.btn-primary'
 
 
 
@@ -58,6 +60,14 @@ export class CRPOLoginPage{
     logOut(){
         cy.get(this.logout_id).click()
         cy.wait(500)
+    }
+
+    Otp_field(OTP){
+        cy.get(this.otp_field_class).type(OTP)
+    }
+
+    Otp_verify(){
+        cy.get(this.verify_button_class).click()
     }
 
 }

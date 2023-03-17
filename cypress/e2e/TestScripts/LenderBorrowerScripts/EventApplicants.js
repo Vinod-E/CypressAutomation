@@ -27,7 +27,7 @@ export class Applicant{
 
     eventApplicant(){
 
-        cy.fixture('applicantData').then(function(candidate){
+        cy.fixture('LBData/applicantData.json').then(function(candidate){
 
             MenuTabs.eventTab()
             cy.wait(3000)
@@ -40,7 +40,7 @@ export class Applicant{
 
     StatusChange(){
 
-        cy.fixture('applicantData').then(function(appli){
+        cy.fixture('LBData/applicantData.json').then(function(appli){
 
             checkbox.select_all_checkbox()
             status.moreActions()
@@ -55,7 +55,7 @@ export class Applicant{
 
     InterviewSlotToApplicant(){
 
-        cy.fixture('userCreationData').then(function(user){
+        cy.fixture('LBData/userCreationData.json').then(function(user){
             checkbox.select_all_checkbox()
             applicant.moreActions()
             applicant.schedule()
@@ -69,7 +69,7 @@ export class Applicant{
 
     Schedule(){
 
-        cy.fixture('applicantData').then(function(appli){
+        cy.fixture('LBData/applicantData.json').then(function(appli){
             applicant.arrow_down()
             applicant.slot_arrow_down()
             applicant.click_on_interviewer()

@@ -7,13 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "amsin": "cypress run  --env ENV=amsin  --browser chrome",
     "beta": "cypress run  --env ENV=beta  --browser chrome",
-    "ams": "cypress run  --env ENV=ams  --browser chrome"
+    "ams": "cypress run  --env ENV=ams  --browser chrome",
+    "amsin_lb": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js' --browser chrome",
+    "beta_lb": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --browser chrome",
+    "ams_lb": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --browser chrome",
+    "amsin_mfa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome",
+    "beta_mfa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome",
+    "ams_mfa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome"
   },
   "keywords": [],
   "author": "Eraganaboina Vinod Kumar",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.3.0",
+    "cypress-localstorage-commands": "^2.2.2",
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-wait-until": "^1.7.2",
     "cypress-xpath": "^2.0.1",
