@@ -23,3 +23,61 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+import "cypress-localstorage-commands";
+
+Cypress.Commands.add('postToken', () => {
+    cy.fixture('loginData').then(function (login) {
+        let env = Cypress.env('ENV')
+        if (env == 'amsin'){var url = login.amsin_login_api;
+                            var user = login.amsin_non_mfa_user_name;
+                            var pwd = login.amsin_non_mfa_pwd;
+                            var tenant = login.amsin_mfa_tenant}
+        else if (env == 'beta'){var url = login.beta_login_api;
+                            var user = login.ams_non_mfa_user_name;
+                            var pwd = login.ams_non_mfa_pwd;
+                            var tenant = login.ams_mfa_tenant}
+        else if (env == 'ams'){var url = login.ams_login_api;
+                            var user = login.ams_non_mfa_user_name;
+                            var pwd = login.ams_non_mfa_pwd;
+                            var tenant = login.ams_mfa_tenant}
+        else {var url = login.amsin_login_api;
+                            var user = login.amsin_non_mfa_user_name;
+                            var pwd = login.amsin_non_mfa_pwd;
+                            var tenant = login.amsin_mfa_tenant}
+
+        cy.request({
+            method: 'POST',
+            url: url,
+            headers: {},
+            body: {
+                LoginName: user,
+                Password: pwd,
+                TenantAlias: tenant,
+                UserName: user
+            }
+        }).then(Response => {
+            cy.setLocalStorage("identity_token", Response.body.Token);
+            console.log('command.js local stored token:: '+ Response.body.Token)
+        });
+    })
+})
+//   cy.request({
+//     method: 'POST',
+//     url: Cypress.env('api_identity_url'), //get from cypress.env.json
+//     form: true, //sets to application/x-www-form-urlencoded
+//     body: {
+//       grant_type: 'client_credentials',
+//       scope: 'xero_all-apis'
+//     },
+//     auth: {
+//       username: Cypress.env('api_identity_username'),
+//       password: Cypress.env('api_identity_password')
+//     }
+//   })
+//   .its('body')
+//   .then(identity => {
+//     cy.setLocalStorage("identity_token", identity.token);
+//   });
+// });

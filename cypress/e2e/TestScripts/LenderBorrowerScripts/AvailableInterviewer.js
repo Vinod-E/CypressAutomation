@@ -30,7 +30,7 @@ export class MakeInterviewerAvailablity{
 
     interviewerAvailablity(){
 
-        cy.fixture('userCreationData').then(function(int_email){
+        cy.fixture('LBData/userCreationData.json').then(function(int_email){
             this.email = int_email
             var email = this.email.email.concat(date,hour,min, '@gmail.com')
 
@@ -48,7 +48,7 @@ export class MakeInterviewerAvailablity{
 
     markPreference(){
 
-        cy.fixture('userCreationData').then(function(int_email){
+        cy.fixture('LBData/userCreationData.json').then(function(int_email){
             this.email = int_email
             var email = this.email.email.concat(date,hour,min, '@gmail.com')
 

@@ -14,7 +14,7 @@ export class InterviewerFeedback{
 
     feedback(){
 
-        cy.fixture('feedbackData').then(function(feedback){
+        cy.fixture('LBData/feedbackData.json').then(function(feedback){
             this.url = feedback
 
             MenuTabs.myInterviews()

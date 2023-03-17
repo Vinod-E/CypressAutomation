@@ -18,6 +18,8 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
+      // require("cypress-localstorage-commands/plugin")(on, config);
+      // return config;
     },
   },
 });
