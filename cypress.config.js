@@ -2,18 +2,21 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
 
+  video: true,
   reporter: 'cypress-mochawesome-reporter',
   "reporterOptions": {
      "embeddedScreenshots": true,
      "charts": true,
      "reportPageTitle": "Vinod Automation Report",
-     "inlineAssets": true
+     "inlineAssets": true,
+     "overwrite": false,
     },
 
   e2e: {
 
+    testIsolation: false,
     watchForFileChanges: false,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 5000,
     
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -22,4 +25,10 @@ module.exports = defineConfig({
       // return config;
     },
   },
+
+  retries: {
+        "runMode": 1, // Used for cypress run, defaults to 0
+        "openMode": 1 // Used for cypress open, defaults to 0
+    }
+  
 });
