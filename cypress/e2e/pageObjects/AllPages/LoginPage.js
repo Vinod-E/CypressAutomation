@@ -67,6 +67,7 @@ export class CRPOLoginPage{
     }
 
     Otp_verify(){
+        cy.wait(2000)
         cy.get(this.verify_button_class).click()
     }
 
