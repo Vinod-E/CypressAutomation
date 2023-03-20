@@ -5,9 +5,6 @@ import { SMSAPIcallhistory } from "../TestScripts/MFAScripts/SMShistoryAPI"
 const loginPage = new CRPO_MFALogin()
 const otp_verify = new SMSAPIcallhistory()
 
-let tokenvalue
-let OTP
-
 
 describe('Multi Factor Authentication(MFA) Login', function () {
 

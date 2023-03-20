@@ -22,6 +22,7 @@ export class CRPOLoginPage{
 
     tenantAlias(tenant){
 
+        cy.get(this.tenant_textbox_xpath).clear()
         cy.get(this.tenant_textbox_xpath).type(tenant)
 
     }

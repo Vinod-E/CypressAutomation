@@ -19,7 +19,7 @@
   "author": "Eraganaboina Vinod Kumar",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.3.0",
+    "cypress": "^12.8.1",
     "cypress-localstorage-commands": "^2.2.2",
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-wait-until": "^1.7.2",
