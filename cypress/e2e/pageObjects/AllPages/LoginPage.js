@@ -8,6 +8,7 @@ export class CRPOLoginPage{
 
 
     // ******* -------- Locator Variables -------- *******
+    employee_class = '.btn.btn-default'
     tenant_textbox_xpath = '[name="alias"]'
     next_button_xpath = '[type="submit"]'
     username_xpath = '[name="loginName"]'
@@ -19,6 +20,16 @@ export class CRPOLoginPage{
     verify_button_class = '.btn-primary'
 
 
+
+    employee(){
+        cy.get(this.employee_class).first().click()
+        cy.wait(1000)
+    }
+
+    vendor_tpo_placecom(){
+        cy.get(this.employee_class).last().click()
+        cy.wait(1000)
+    }
 
     tenantAlias(tenant){
 
@@ -70,6 +81,7 @@ export class CRPOLoginPage{
     Otp_verify(){
         cy.wait(2000)
         cy.get(this.verify_button_class).click()
+        load.UIPageCRPO()
     }
 
 }

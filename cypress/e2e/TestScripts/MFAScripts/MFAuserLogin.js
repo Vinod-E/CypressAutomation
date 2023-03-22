@@ -12,7 +12,7 @@ const loginPage = new CRPOLoginPage()
 export class CRPO_MFALogin{
 
     loginEnvironment(type){
-        cy.fixture('loginData').then(function (login) {
+        cy.fixture('CRPO_MFA_Data').then(function (login) {
 
             let env = Cypress.env('ENV')
             this.details = new CRPO_MFALogin() // Current class instance
