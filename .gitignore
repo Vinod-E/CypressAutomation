@@ -2,3 +2,5 @@
 *.png
 *.xls
 cypress/fixtures/loginData.json
+cypress/fixtures/ADFS_MFA_Data.json
+cypress/fixtures/CRPO_MFA_Data.json

@@ -15,6 +15,8 @@ module.exports = defineConfig({
   e2e: {
 
     testIsolation: false,
+    chromeWebSecurity: false,
+    experimentalOriginDependencies: true,
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
     
