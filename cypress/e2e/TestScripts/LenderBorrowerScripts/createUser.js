@@ -46,7 +46,7 @@ export class CreateUser{
             user.EnterPassword(this.amsuser.password)
             user.ConfirmPassword(this.amsuser.password)
             user.createButton()
-            notifier.dismiss_notifier()
+            // notifier.dismiss_notifier()
         })
     }
 

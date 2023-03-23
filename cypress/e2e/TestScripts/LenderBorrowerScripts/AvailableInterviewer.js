@@ -19,6 +19,7 @@ const slot = new ManageSlotPage()
 let objectDate = new Date();
 let date = objectDate.toDateString().replace(/\s/g,'');
 let hour = objectDate.getHours();
+let hour_slot = objectDate.getHours().toString().padStart(2, "0");
 let min = objectDate.getMinutes().toString().padStart(2, "0");
 let day = objectDate.getDate().toString().padStart(2, "0");
 let month = (objectDate.getMonth() + 1).toString().padStart(2, "0");
@@ -70,7 +71,7 @@ export class MakeInterviewerAvailablity{
         interviewer.slot()
         slot.fromDate(Todaydate)
         slot.toDate(Todaydate)
-        slot.fromTime(hour + ":" + min)
+        slot.fromTime(hour_slot + ":" + min)
         slot.toTime((hour+4) + ":" + min)
         slot.slots_generation()
         slot.save()
