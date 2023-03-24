@@ -20,4 +20,9 @@ export class GmailLoginPage{
         })
     }
 
+    loading_with_token(){
+
+        cy.get('.form-group', {timeout:10000}).should('not.exist');
+    }
+
 }
