@@ -92,6 +92,7 @@ export class ADFS_EMail_MFALogin{
             cy.visit(url)
             this.details.ADFS_loginDetails(tenant, username, password)
             gmail.google_accounts()
+            gmail.loading_with_token()
         })
     }
 
@@ -105,7 +106,7 @@ export class ADFS_EMail_MFALogin{
         
     }
 
-    ADFS_loginDetails(tenant, username, password){
+    ADFS_loginDetails(tenant){
         loginPage.tenantAlias(tenant)
         loginPage.nextToTenant()
         loginPage.employee()
