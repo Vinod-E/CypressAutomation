@@ -21,6 +21,10 @@ export class EventApplicantPage{
     slot_arrow_xpath = '(//*[@class="fa fa-chevron-right"])[4]'
     interviewer_xpath = '[title="View Slots Of Interviewer"]'
     verify_skills_class = '.dataSpan.ng-scope'
+    participants_field_xpath = '[data="vm.catalogs.borrowerInterviewers"]'
+    enter_multiple_value_xpath = 'input[ng-change="vm.leftFilterChanged(vm.filterLeft)"]'
+    move_selection_xpath = 'button[data-ng-click="vm.moveAllItemsRight();"]'
+    done_selection_xpath = '.pull-right > a'
     schedule_class = '.data_block > :nth-child(2) > .btn'
 
 
@@ -70,6 +74,13 @@ export class EventApplicantPage{
     verify_interviewer_skills(skill1, skill2){
         cy.get(this.verify_skills_class).should('contain', skill1)
         .and('contain', skill2)
+    }
+
+    participants_field(){
+        cy.get(this.participants_field_xpath).click()
+        cy.get(this.enter_multiple_value_xpath).type('vinod kumar int')
+        cy.get(this.move_selection_xpath).click()
+        cy.get(this.done_selection_xpath).click()
     }
 
     schdeule_to_interview(){

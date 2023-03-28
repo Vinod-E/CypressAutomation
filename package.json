@@ -8,12 +8,17 @@
     "amsin": "cypress run  --env ENV=amsin  --browser chrome",
     "beta": "cypress run  --env ENV=beta  --browser chrome",
     "ams": "cypress run  --env ENV=ams  --browser chrome",
+
     "amsin_lb": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js' --headed --browser chrome",
-    "beta_lb": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --browser chrome",
-    "ams_lb": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --browser chrome",
+    "beta_lb": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --headed --browser chrome",
+    "ams_lb": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --headed --browser chrome",
+    
     "amsin_mfa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome",
     "beta_mfa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome",
-    "ams_mfa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome"
+    "ams_mfa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome",
+  
+    "amsin_adfs": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/ADFS_E2E_Regression.cy.js' --headed --browser chrome",
+    "ams_adfs": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/ADFS_E2E_Regression.cy.js' --headed --browser chrome"
   },
   "keywords": [],
   "author": "Eraganaboina Vinod Kumar",
