@@ -74,6 +74,7 @@ export class Applicant{
             applicant.slot_arrow_down()
             applicant.click_on_interviewer()
             applicant.verify_interviewer_skills(appli.skill1, appli.skill2)
+            applicant.participants_field()
             applicant.schdeule_to_interview()
             notifier.dismiss_text(appli.schedule_message)
             notifier.dismiss_notifier()
