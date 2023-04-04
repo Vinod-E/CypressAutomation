@@ -1,0 +1,9 @@
+{
+    "JobName": "CypressJob_",
+    "Attachment": "cypress/fixtures/ADFSData/job-description.pdf",
+    "Description": "HOW TO TEST IFRAMES WITH CYPRESS",
+    "Location": "Bangalore",
+    "HiringManager": "HM",
+    "BusinessUnit": "BU",
+    "Openings": "10"
+}

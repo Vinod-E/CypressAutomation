@@ -22,7 +22,8 @@ export class GmailLoginPage{
 
     loading_with_token(){
 
-        cy.get('.form-group', {timeout:10000}).should('not.exist');
+        cy.get('.form-group', {timeout:100000}).should('not.exist');
+        cy.get('[ui-sref="crpo.dashboard"]', {timeout:1000000}).should('exist')
     }
 
 }

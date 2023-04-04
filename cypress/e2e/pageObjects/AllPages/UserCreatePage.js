@@ -51,7 +51,8 @@ export class CreateUserPage{
 
     UserLocation(location){
         cy.get(this.user_location_xpath).type(location)
-        cy.get('[title="Visakhapatnam"]').trigger('mousemove').click()
+        .should("have.value", location).type('{downarrow}{enter}')
+        // cy.get('[title="Visakhapatnam"]').trigger('mousemove').click()
     }
 
     UserRole(role){
