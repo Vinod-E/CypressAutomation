@@ -100,6 +100,15 @@ Cypress.Commands.add('ADFSpostToken', () => {
         });
     })
 })
+
+
+Cypress.Commands.add('getIframe', (iframe) => {
+    return cy.get(iframe)
+        .its('0.contentDocument.body')
+        .should('be.visible')
+        .then(cy.wrap);
+})
+
 //   cy.request({
 //     method: 'POST',
 //     url: Cypress.env('api_identity_url'), //get from cypress.env.json
