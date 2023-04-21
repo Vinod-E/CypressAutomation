@@ -27,6 +27,24 @@
 
 import "cypress-localstorage-commands";
 
+Cypress.Commands.add('GobalVariables', () => {
+    cy.fixture('GBLVarData/script_var_Data.json').then(function(gobalVar){
+        let env = Cypress.env('ENV')
+        if (env == 'amsin'){
+            cy.setLocalStorage("tenant", gobalVar.lb_amsin_tenant);
+        }
+        else if (env == 'beta'){
+            cy.setLocalStorage("tenant", gobalVar.lb_beta_tenant);
+        }
+        else if (env == 'ams'){
+            cy.setLocalStorage("tenant", gobalVar.lb_ams_tenant);
+        }
+        else{
+            cy.setLocalStorage("tenant", gobalVar.amlb_amsin_tenantsintenant);
+        }
+    })
+})
+
 Cypress.Commands.add('postToken', () => {
     cy.fixture('CRPO_MFA_Data').then(function (login) {
         let env = Cypress.env('ENV')
