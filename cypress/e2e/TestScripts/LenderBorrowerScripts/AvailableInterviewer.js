@@ -27,6 +27,17 @@ let year = objectDate.getFullYear();
 let Todaydate = day + "/" + month + "/" + year
 
 
+// before Test Run
+before(() => {
+    cy.GobalVariables();
+    cy.saveLocalStorage();
+});
+
+beforeEach(() => {
+    cy.restoreLocalStorage();
+});
+
+
 export class MakeInterviewerAvailablity{
 
     interviewerAvailablity(){
@@ -49,19 +60,22 @@ export class MakeInterviewerAvailablity{
 
     markPreference(){
 
-        cy.fixture('LBData/userCreationData.json').then(function(int_email){
-            this.email = int_email
-            var email = this.email.email.concat(date,hour,min, '@gmail.com')
+        cy.getLocalStorage("tenant").then(tenant => {
+            console.log("Tenant Name:: ", tenant);
+            cy.fixture('LBData/userCreationData.json').then(function(int_email){
+                this.email = int_email
+                var email = this.email.email.concat(date,hour,min, '@gmail.com')
 
-            search.Filter()
-            search.Email(email)
-            search.button_search()
-            checkbox.select_all_checkbox()
-            interviewer.markPreference()
-            interviewer.TenantAlias('accentureci')
-            interviewer.mark()
-            interviewer.close_preference_window()
-            notifier.dismiss_notifier()
+                search.Filter()
+                search.Email(email)
+                search.button_search()
+                checkbox.select_all_checkbox()
+                interviewer.markPreference()
+                interviewer.TenantAlias(tenant)
+                interviewer.mark()
+                interviewer.close_preference_window()
+                notifier.dismiss_notifier()
+            })
         })
     }
 
