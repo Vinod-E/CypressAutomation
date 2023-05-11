@@ -30,6 +30,7 @@ let Todaydate = day + "/" + month + "/" + year
 // before Test Run
 before(() => {
     cy.GobalVariables();
+    cy.RandomNumber();
     cy.saveLocalStorage();
 });
 
@@ -44,7 +45,8 @@ export class MakeInterviewerAvailablity{
 
         cy.fixture('LBData/userCreationData.json').then(function(int_email){
             this.email = int_email
-            var email = this.email.email.concat(date,hour,min, '@gmail.com')
+            var r_num = localStorage.getItem("random_number")
+            var email = this.email.email.concat(date,r_num, '@gmail.com')
 
             MenuTabs.moreTab()
             configTab.ConfigurationTab()
@@ -60,22 +62,21 @@ export class MakeInterviewerAvailablity{
 
     markPreference(){
 
-        cy.getLocalStorage("tenant").then(tenant => {
-            console.log("Tenant Name:: ", tenant);
-            cy.fixture('LBData/userCreationData.json').then(function(int_email){
-                this.email = int_email
-                var email = this.email.email.concat(date,hour,min, '@gmail.com')
+        cy.fixture('LBData/userCreationData.json').then(function(int_email){
+            this.email = int_email
+            var r_num = localStorage.getItem("random_number")
+            var tenant = localStorage.getItem('tenant')
+            var email = this.email.email.concat(date,r_num, '@gmail.com')
 
-                search.Filter()
-                search.Email(email)
-                search.button_search()
-                checkbox.select_all_checkbox()
-                interviewer.markPreference()
-                interviewer.TenantAlias(tenant)
-                interviewer.mark()
-                interviewer.close_preference_window()
-                notifier.dismiss_notifier()
-            })
+            search.Filter()
+            search.Email(email)
+            search.button_search()
+            checkbox.select_all_checkbox()
+            interviewer.markPreference()
+            interviewer.TenantAlias(tenant)
+            interviewer.mark()
+            interviewer.close_preference_window()
+            notifier.dismiss_notifier()
         })
     }
 
@@ -86,7 +87,7 @@ export class MakeInterviewerAvailablity{
         slot.fromDate(Todaydate)
         slot.toDate(Todaydate)
         slot.fromTime(hour_slot + ":" + min)
-        slot.toTime((hour+4) + ":" + min)
+        slot.toTime((hour+1) + ":" + min)
         slot.slots_generation()
         slot.save()
         slot.close()

@@ -10,7 +10,7 @@ export class uiNotifier {
 
 
     dismiss_notifier(){
-        cy.get(this.close_cross_xpath, {timeout:1000000}).should('be.visible').click()
+        cy.get(this.close_cross_xpath, {timeout:1000000}).should('be.visible').click({ multiple: true })
         }
 
     dismiss_text(text){

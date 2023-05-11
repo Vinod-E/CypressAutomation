@@ -13,7 +13,8 @@ export class IntLogin{
     loginEnvironment(type){
         cy.fixture('loginData').then(function (login) {
 
-            let name = login.int_username.concat(date)
+            var r_num = localStorage.getItem("random_number")
+            let name = login.int_username.concat(date, r_num)
             let env = Cypress.env('ENV')
 
             this.details = new IntLogin() // Current class instance

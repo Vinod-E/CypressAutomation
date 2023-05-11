@@ -40,7 +40,7 @@ Cypress.Commands.add('GobalVariables', () => {
             cy.setLocalStorage("tenant", gobalVar.lb_ams_tenant);
         }
         else{
-            cy.setLocalStorage("tenant", gobalVar.amlb_amsin_tenantsintenant);
+            cy.setLocalStorage("tenant", gobalVar.lb_amsin_tenant);
         }
     })
 })

@@ -19,8 +19,17 @@ const notifier = new uiNotifier()
 // date and time 
 let objectDate = new Date();
 let date = objectDate.toDateString().replace(/\s/g,'');
-let hour = objectDate.getHours();
-let min = objectDate.getMinutes().toString().padStart(2, "0");
+
+
+// before Test Run
+before(() => {
+    cy.RandomNumber();
+    cy.saveLocalStorage();
+});
+
+beforeEach(() => {
+    cy.restoreLocalStorage();
+});
 
 export class CreateUser{
 
@@ -28,8 +37,9 @@ export class CreateUser{
         
         cy.fixture('LBData/userCreationData.json').then(function (amsuser) {
             this.amsuser = amsuser
-            let name = this.amsuser.name.concat(date)
-            let email = this.amsuser.email.concat(date,hour,min, '@gmail.com')
+            var r_num = localStorage.getItem("random_number")
+            let name = this.amsuser.name.concat(date, r_num)
+            let email = this.amsuser.email.concat(date,r_num, '@gmail.com')
 
             MenuTabs.moreTab()
             configTab.ConfigurationTab()
@@ -51,9 +61,11 @@ export class CreateUser{
     }
 
     userSearch(){
+        
         cy.fixture('LBData/userCreationData.json').then(function (amsuser) {
             this.amsuser = amsuser
-            let email = this.amsuser.email.concat(date)
+            var r_num = localStorage.getItem("random_number")
+            let email = this.amsuser.email.concat(date, r_num, '@gmail.com')
 
             search.Filter()
             search.UserEmail(email)

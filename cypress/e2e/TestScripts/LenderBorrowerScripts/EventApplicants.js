@@ -23,6 +23,18 @@ let year = objectDate.getFullYear();
 let Todaydate = day + "/" + month + "/" + year
 
 
+// before Test Run
+before(() => {
+    cy.GobalVariables();
+    cy.RandomNumber();
+    cy.saveLocalStorage();
+});
+
+beforeEach(() => {
+    cy.restoreLocalStorage();
+});
+
+
 export class Applicant{
 
     eventApplicant(){
@@ -56,12 +68,14 @@ export class Applicant{
     InterviewSlotToApplicant(){
 
         cy.fixture('LBData/userCreationData.json').then(function(user){
+            var r_num = localStorage.getItem("random_number")
+            
             checkbox.select_all_checkbox()
             applicant.moreActions()
             applicant.schedule()
             applicant.slot_start_date(Todaydate)
             applicant.slot_end_date(Todaydate)
-            applicant.Alias(user.name.concat(date))
+            applicant.Alias(user.name.concat(date, r_num))
             applicant.search()
         })
         

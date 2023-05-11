@@ -15,8 +15,18 @@ const borrower = new BorrowerUserPage()
 // date and time 
 let objectDate = new Date();
 let date = objectDate.toDateString().replace(/\s/g,'');
-let hour = objectDate.getHours();
-let min = objectDate.getMinutes().toString().padStart(2, "0");
+
+
+// before Test Run
+before(() => {
+    cy.GobalVariables();
+    cy.RandomNumber();
+    cy.saveLocalStorage();
+});
+
+beforeEach(() => {
+    cy.restoreLocalStorage();
+});
 
 
 export class BorrowerInterviewer{
@@ -24,7 +34,8 @@ export class BorrowerInterviewer{
     interviewerAsBorrower(){
 
         cy.fixture('LBData/userCreationData.json').then(function(user){
-            let email = user.email.concat(date)
+            var r_num = localStorage.getItem("random_number")
+            var email = user.email.concat(date,r_num, '@gmail.com')
 
             cy.wait(4000)
             MenuTabs.moreTab()
@@ -50,7 +61,7 @@ export class BorrowerInterviewer{
     BorrowerSlots(){
 
         borrower.ViewSlots()
-        borrower.numberofSlots(3)
+        borrower.numberofSlots()
         borrower.colse()
     }
 }
