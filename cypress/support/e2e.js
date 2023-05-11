@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import 'cypress-mochawesome-reporter/register';
+import "cypress-localstorage-commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -28,3 +29,8 @@ require('cypress-xpath')
 //         this.amsuser = amsuser
 //     })
 // })
+
+Cypress.Commands.add('RandomNumber', () => {
+    let r_number = Math.floor((Math.random() * 10000) + 1);
+    cy.setLocalStorage("random_number", r_number);
+})
