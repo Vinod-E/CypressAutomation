@@ -84,11 +84,13 @@ export class Applicant{
     Schedule(){
 
         cy.fixture('LBData/applicantData.json').then(function(appli){
+            var participant = localStorage.getItem("participant")
+
             applicant.arrow_down()
             applicant.slot_arrow_down()
             applicant.click_on_interviewer()
             applicant.verify_interviewer_skills(appli.skill1, appli.skill2)
-            applicant.participants_field()
+            applicant.participants_field(participant)
             applicant.schdeule_to_interview()
             notifier.dismiss_text(appli.schedule_message)
             notifier.dismiss_notifier()

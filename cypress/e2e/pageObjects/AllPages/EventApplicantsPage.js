@@ -76,9 +76,10 @@ export class EventApplicantPage{
         .and('contain', skill2)
     }
 
-    participants_field(){
+    participants_field(participant){
+        cy.wait(1000)
         cy.get(this.participants_field_xpath).click()
-        cy.get(this.enter_multiple_value_xpath).type('vinod kumar int')
+        cy.get(this.enter_multiple_value_xpath).type(participant)
         cy.get(this.move_selection_xpath).click()
         cy.get(this.done_selection_xpath).click()
     }
