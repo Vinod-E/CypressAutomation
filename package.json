@@ -12,6 +12,10 @@
     "amsin_lb": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js' --headed --browser chrome",
     "beta_lb": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --headed --browser chrome",
     "ams_lb": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/LenderBorrowerFlow.cy.js'  --headed --browser chrome",
+
+    "amsin_us": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/UploadScores.cy.js' --headed --browser chrome",
+    "beta_us": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/UploadScores.cy.js'  --headed --browser chrome",
+    "ams_us": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/UploadScores.cy.js'  --headed --browser chrome",
     
     "amsin_mfa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome",
     "beta_mfa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome",

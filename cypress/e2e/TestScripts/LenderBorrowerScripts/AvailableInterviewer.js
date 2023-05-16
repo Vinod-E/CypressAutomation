@@ -55,8 +55,8 @@ export class MakeInterviewerAvailablity{
             interviewer.EnterEmail(email)
             interviewer.Validate()
             interviewer.Create()
-            interviewer.Close()
             notifier.dismiss_notifier()
+            interviewer.Close()
         })
     }
 

@@ -8,7 +8,7 @@ export class UserAvailabilityPage{
     enter_email_xpath = 'textarea[ng-model="vm.data.interviewerEmailIds"]'
     validate_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[1]'
     create_xpath = '//*[@id="mainBodyElement"]/div[7]/div/div/div[3]/div/button[2]'
-    close_class = '.close'
+    close_xpath = '[ng-click="$hide()"]'
     manage_slot_id = '#cardlist-view-Manage-Slots'
     mark_tenant_id = '#cardlist-view-Mark-Preference'
     tenant_filed_xpath = '[ng-model="vm.data.tenantAlias"]'
@@ -29,7 +29,7 @@ export class UserAvailabilityPage{
         cy.xpath(this.create_xpath).click()
     }
     Close(){
-        cy.get(this.close_class).click()
+        cy.get(this.close_xpath).first().click()
     }
     markPreference(){
         cy.get(this.mark_tenant_id).click()
