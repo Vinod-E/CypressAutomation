@@ -41,18 +41,30 @@ Cypress.Commands.add('GobalVariables', () => {
         if (env == 'amsin'){
             cy.setLocalStorage("tenant", gobalVar.lb_amsin_tenant);
             cy.setLocalStorage("participant", gobalVar.lb_amsin_participant);
+            cy.setLocalStorage("uploadscores_event", gobalVar.us_amsin_event);
+            cy.setLocalStorage("empty_scores_file", gobalVar.amsin_empty_scores);
+            cy.setLocalStorage("scores_file", gobalVar.amsin_scores);
         }
         else if (env == 'beta'){
             cy.setLocalStorage("tenant", gobalVar.lb_beta_tenant);
             cy.setLocalStorage("participant", gobalVar.lb_beta_participant);
+            cy.setLocalStorage("uploadscores_event", gobalVar.us_beta_event);
+            cy.setLocalStorage("empty_scores_file", gobalVar.ams_empty_scores);
+            cy.setLocalStorage("scores_file", gobalVar.ams_scores);
         }
         else if (env == 'ams'){
             cy.setLocalStorage("tenant", gobalVar.lb_ams_tenant);
             cy.setLocalStorage("participant", gobalVar.lb_ams_participant);
+            cy.setLocalStorage("uploadscores_event", gobalVar.us_ams_event);
+            cy.setLocalStorage("empty_scores_file", gobalVar.ams_empty_scores);
+            cy.setLocalStorage("scores_file", gobalVar.ams_scores);
         }
         else{
             cy.setLocalStorage("tenant", gobalVar.lb_amsin_tenant);
             cy.setLocalStorage("participant", gobalVar.lb_amsin_participant);
+            cy.setLocalStorage("uploadscores_event", gobalVar.us_amsin_event);
+            cy.setLocalStorage("empty_scores_file", gobalVar.amsin_empty_scores);
+            cy.setLocalStorage("scores_file", gobalVar.amsin_scores);
         }
     })
 })
