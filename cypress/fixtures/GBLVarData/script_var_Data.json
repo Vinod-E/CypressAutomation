@@ -5,5 +5,14 @@
     
     "lb_amsin_participant": "InterviewerOne",
     "lb_beta_participant": "vinod kumar int",
-    "lb_ams_participant": "vinod kumar int"
+    "lb_ams_participant": "vinod kumar int",
+
+    "us_amsin_event": "UploadScores",
+    "us_beta_event": "UploadScores",
+    "us_ams_event": "UploadScores",
+
+    "amsin_empty_scores": "cypress/fixtures/UploadScores/Amsin_CandidateTemplate_EmptyScores.xlsx",
+    "amsin_scores": "cypress/fixtures/UploadScores/Amsin_CandidateTemplate_Scores.xlsx",
+    "ams_empty_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_EmptyScores.xlsx",
+    "ams_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_Scores.xlsx"
 }
