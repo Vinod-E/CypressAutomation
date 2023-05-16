@@ -12,7 +12,7 @@ const loginPage = new CRPOLoginPage()
 export class CRPOLogin{
 
     loginEnvironment(type){
-        cy.fixture('loginData').then(function (login) {
+        cy.fixture('LB_loginData').then(function (login) {
             let env = Cypress.env('ENV')
             this.login = login
             this.details = new CRPOLogin() // Current class instance

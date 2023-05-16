@@ -11,7 +11,7 @@ let date = objectDate.toDateString().replace(/\s/g,'');
 export class IntLogin{
 
     loginEnvironment(type){
-        cy.fixture('loginData').then(function (login) {
+        cy.fixture('LB_loginData').then(function (login) {
 
             var r_num = localStorage.getItem("random_number")
             let name = login.int_username.concat(date, r_num)
@@ -60,7 +60,7 @@ export class IntLogin{
 
 
     lender_feedback_link(id){
-        cy.fixture('loginData').then(function (feedback) {
+        cy.fixture('LB_loginData').then(function (feedback) {
 
             let env = Cypress.env('ENV')
 

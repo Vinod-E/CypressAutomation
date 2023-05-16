@@ -1,9 +1,9 @@
 {
-    "lb_amsin_tenant": "accentureci",
+    "lb_amsin_tenant": "crpoautomation",
     "lb_beta_tenant": "crpouiautomation",
     "lb_ams_tenant": "crpouiautomation",
     
-    "lb_amsin_participant": "vinod kumar int",
+    "lb_amsin_participant": "InterviewerOne",
     "lb_beta_participant": "vinod kumar int",
     "lb_ams_participant": "vinod kumar int"
 }
