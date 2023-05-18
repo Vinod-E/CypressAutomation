@@ -1,15 +1,19 @@
 import { CRPOLogin } from "../TestScripts/UploadScoreScripts/CrpoLogin"
 import { EventTab } from "../TestScripts/UploadScoreScripts/EventTabViewAssessment"
+import { PanelSC } from "../TestScripts/UploadScoreScripts/SCpanel"
+import { TestApplicants } from "../TestScripts/UploadScoreScripts/AssessmentApplicant"
 
 //Create an instance for import classes
 const crpo_login = new CRPOLogin()
 const eventtab = new EventTab()
+const sc_panel = new PanelSC ()
+const TA = new TestApplicants()
 
 
 
 describe('CRPO Login', function () {
 
-    it('Employee Login with offical Email Id', ()=> {
+    it('CRPO User Login', ()=> {
         crpo_login.loginEnvironment()
     })
 
@@ -40,7 +44,19 @@ describe('Assessment Upload Scores', function(){
         eventtab.upload_assessment_scores()
     })
 
-    it.skip('Logged Out from CRPO', ()=> {
+})
+
+describe('Shrotlisting Panel', function(){
+
+    it('Applying SC', ()=> {
+        sc_panel.shortlisting()
+    })
+
+    it('View Assessment Applicants', ()=>{
+        TA.applicants()
+    })
+
+    it('Logged Out from CRPO', ()=> {
         crpo_login.logoutCRPO()
     })
 })
