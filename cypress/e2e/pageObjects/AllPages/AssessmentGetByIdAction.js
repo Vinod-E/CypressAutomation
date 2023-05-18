@@ -12,12 +12,16 @@ export class AssessmentgetByidActions{
     test_getby_xpath = 'a[title="UploadScores"]'
     test_actions = '.info_catagory.ng-scope'
     upload_score_id = '#Assessment-Details-Upload-Score-Sheet'
+    applicants_id = '#Assessment-Details-View-Candidates'
     file_xpath = 'input[type=file]'
     btn_xpath = '[ng-click="vm.upload();"]'
     refresh_xpath = '[ng-click="vm.refresh()"]'
+    child_refresh_class = '.fa.fa-refresh'
     info_class = '.fa.fa-info-circle'
+    close_class = '.close'
     remove_count_class = '.status-card.bg-danger.ng-binding'
     upload_count_class = '.status-card.bg-success.ng-binding'
+    offline_xpath = 'span[title="Attended Offline"]'
 
 
 
@@ -35,6 +39,11 @@ export class AssessmentgetByidActions{
         cy.get(this.upload_score_id,{timeout:100000}).click()
     }
 
+    view_applicant_action(){
+        cy.get(this.applicants_id,{timeout:100000}).click()
+        load.UIPageCRPO()
+    }
+
     upload_score_file(file){
         cy.get(this.file_xpath).selectFile(file, {force: true})
     }
@@ -47,7 +56,9 @@ export class AssessmentgetByidActions{
     refresh_bg_task(){
         cy.get(this.refresh_xpath, {timeout:100000}).first().click()
         load.UIPageCRPO()
-        cy.wait(1000)
+        cy.wait(2000)
+        cy.get(this.child_refresh_class).last().click()
+        load.UIPageCRPO()
     }
 
     upload_info(){
@@ -59,7 +70,7 @@ export class AssessmentgetByidActions{
         cy.get(this.upload_count_class).then(($value) => {
             this.textvalue = $value.text()
             if (this.textvalue == text){
-                cy.log('Upload candidate Count = ', this.textvalue)
+                console.log('Upload candidate Count = ', this.textvalue)
             }
             else return;
         })
@@ -69,7 +80,21 @@ export class AssessmentgetByidActions{
         cy.get(this.remove_count_class).then(($value) => {
             this.textvalue = $value.text()
             if (this.textvalue == text){
-                cy.log('Remove candidate Count = ', this.textvalue)
+                console.log('Remove candidate Count = ', this.textvalue)
+            }
+            else return;
+        }) 
+    }
+
+    Close(){
+        cy.get(this.close_class).first().click()
+    }
+
+    view_offline_applicant(){
+        cy.get(this.offline_xpath).then(($value) => {
+            this.count = $value.length
+            if (this.count == 10){
+                console.log('Offline Upload candidate Count = ', this.count)
             }
             else return;
         }) 

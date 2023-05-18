@@ -52,7 +52,10 @@ export class EventTab{
 
         test.upload_score_file(no_scores)
         test.upload_file_button()
+        test.refresh_bg_task()
+        test.upload_info()
         test.remove_score_count('Removed 10')
+        test.Close()
     }
 
     upload_assessment_scores(){
@@ -60,6 +63,9 @@ export class EventTab{
 
         test.upload_score_file(scores)
         test.upload_file_button()
+        test.refresh_bg_task()
+        test.upload_info()
         test.upload_score_count('Added 10')
+        test.Close()
     }
 }
