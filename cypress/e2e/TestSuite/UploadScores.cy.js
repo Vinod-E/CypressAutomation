@@ -36,11 +36,11 @@ describe('Assessment Upload Scores', function(){
         eventtab.assessment_tab()
     })
 
-    it('upload Empty scores', ()=> {
+    it('Upload Empty scores', ()=> {
         eventtab.upload_assessment_emptyscores()
     })
 
-    it('upload scores', ()=> {
+    it('Upload scores', ()=> {
         eventtab.upload_assessment_scores()
     })
 
@@ -48,7 +48,7 @@ describe('Assessment Upload Scores', function(){
 
 describe('Shrotlisting Panel', function(){
 
-    it('Applying SC', ()=> {
+    it('Applying SC and Approve SC', ()=> {
         sc_panel.shortlisting()
     })
 

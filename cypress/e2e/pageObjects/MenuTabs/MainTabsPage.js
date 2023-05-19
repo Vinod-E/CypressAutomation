@@ -17,6 +17,7 @@ export class MainTab{
 
 
     eventTab(){
+        cy.get(this.event_tab_xpath, { timeout: 1000000 }).should('exist')
         cy.get(this.event_tab_xpath).click()
     }
 
