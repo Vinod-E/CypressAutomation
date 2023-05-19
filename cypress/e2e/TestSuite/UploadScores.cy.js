@@ -48,13 +48,21 @@ describe('Assessment Upload Scores', function(){
 
 describe('Shrotlisting Panel', function(){
 
-    it('Applying SC and Approve SC', ()=> {
-        sc_panel.shortlisting()
+    it('Saving and Applying SC', ()=> {
+        sc_panel.shortlisting_apply()
+    })
+
+    it('S/R/DI Count Verfied and Approved SC', ()=> {
+        sc_panel.count_verification_approve()
     })
 
     it('View Assessment Applicants', ()=>{
         TA.applicants()
     })
+})
+
+
+describe('CRPO Logout from App', function(){
 
     it('Logged Out from CRPO', ()=> {
         crpo_login.logoutCRPO()
