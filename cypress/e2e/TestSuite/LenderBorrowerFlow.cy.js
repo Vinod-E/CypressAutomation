@@ -16,6 +16,11 @@ const applicant = new Applicant()
 const feedback = new InterviewerFeedback()
 
 
+describe('------------------~~~ Environment - '.concat(Cypress.env('ENV') + ' ~~~------------------'), function () {
+    it('Script:: Lender and Borrower Interviewe Flow', ()=> {
+    })
+})
+
 describe('Lender Flow', function () {
 
     it('Lender CRPO Login', ()=> {

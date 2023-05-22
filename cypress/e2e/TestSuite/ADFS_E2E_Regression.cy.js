@@ -11,6 +11,10 @@ const req = new Requirment()
 const event = new Event()
 
 
+describe('------------------~~~ Environment - '.concat(Cypress.env('ENV') + ' ~~~------------------'), function () {
+    it('Script:: SAML login with Basic Regression Flow', ()=> {
+    })
+})
 
 describe('ADFS - Google Mail Login', function () {
 

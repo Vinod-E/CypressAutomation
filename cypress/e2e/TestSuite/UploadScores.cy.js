@@ -10,6 +10,10 @@ const sc_panel = new PanelSC ()
 const TA = new TestApplicants()
 
 
+describe('------------------~~~ Environment - '.concat(Cypress.env('ENV') + ' ~~~------------------'), function () {
+    it('Script:: Upload Scores and Shortlisting/Rejecting Candidates from Panel', ()=> {
+    })
+})
 
 describe('CRPO Login', function () {
 
