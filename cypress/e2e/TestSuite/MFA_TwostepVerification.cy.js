@@ -8,6 +8,10 @@ const otp_verify = new SMSAPIcallhistory()
 const smal_login = new ADFS_EMail_MFALogin()
 
 
+describe('------------------~~~ Environment - '.concat(Cypress.env('ENV') + ' ~~~------------------'), function () {
+    it('Script:: Multi Factor Authentication with SAML login / Normal login', ()=> {
+    })
+})
 
 describe('ADFS(MFA) - Google Mail Login', function () {
 
