@@ -33,9 +33,10 @@
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-wait-until": "^1.7.2",
     "cypress-xpath": "^2.0.1",
-    "node-xlsx": "^0.21.0"
+    "node-xlsx": "^0.4.0"
   },
   "dependencies": {
-    "jsonpath": "^1.1.1"
+    "jsonpath": "^1.1.1",
+    "package.json": "^0.0.0"
   }
 }
