@@ -6,3 +6,4 @@ cypress/fixtures/CRPO_MFA_Data.json
 cypress/fixtures/Common_Login_Data.json
 cypress/fixtures/LB_loginData.json
 node_modules
+package-lock.json
