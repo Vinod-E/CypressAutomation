@@ -1,6 +1,6 @@
 import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
 import { AdvanceSearch } from "../../pageObjects/CommonPages/AdvanceSearchPage"
-import { EventgetByidActions } from "../../pageObjects/AllPages/EventGetByIdAction"
+import { EventgetByidActions } from "../../pageObjects/AllPages/EventPages/EventGetByIdAction"
 import { AssessmentgetByidActions } from "../../pageObjects/AllPages/AssessmentGetByIdAction"
 
 
