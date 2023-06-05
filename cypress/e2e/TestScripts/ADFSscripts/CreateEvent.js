@@ -1,5 +1,5 @@
 import { MainTab } from "../../pageObjects/MenuTabs/MainTabsPage"
-import { EventCreatePage } from "../../pageObjects/AllPages/EventPage"
+import { EventCreatePage } from "../../pageObjects/AllPages/EventPages/EventPage"
 import { uiNotifier } from "../../pageObjects/CommonPages/dismissNotifieronpage"
 
 //call pageObject methods

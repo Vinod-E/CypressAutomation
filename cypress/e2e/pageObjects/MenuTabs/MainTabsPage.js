@@ -32,6 +32,7 @@ export class MainTab{
     }
     
     moreTab(){
+        cy.xpath(this.more_tab_xapth, { timeout: 1000000 }).should('exist')
         cy.xpath(this.more_tab_xapth).click()
     }
 

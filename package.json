@@ -17,6 +17,10 @@
     "beta_us": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/UploadScores.cy.js'  --headed --browser chrome",
     "ams_us": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/UploadScores.cy.js'  --headed --browser chrome",
     
+    "amsin_uf": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/BulkScheduleFeedback.cy.js' --headed --browser chrome",
+    "beta_uf": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/BulkScheduleFeedback.cy.js'  --headed --browser chrome",
+    "ams_uf": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/BulkScheduleFeedback.cy.js'  --headed --browser chrome",
+    
     "amsin_mfa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome",
     "beta_mfa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --browser chrome",
     "ams_mfa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser chrome",

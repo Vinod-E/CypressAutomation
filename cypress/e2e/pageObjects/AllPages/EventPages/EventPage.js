@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-import {CommonLoadingPage} from "../LoadingPages/LoadingPage"
+import {CommonLoadingPage} from "../../LoadingPages/LoadingPage"
 
 //call pageObject methods
 const load = new CommonLoadingPage()

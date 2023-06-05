@@ -14,5 +14,8 @@
     "amsin_empty_scores": "cypress/fixtures/UploadScores/Amsin_CandidateTemplate_EmptyScores.xlsx",
     "amsin_scores": "cypress/fixtures/UploadScores/Amsin_CandidateTemplate_Scores.xlsx",
     "ams_empty_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_EmptyScores.xlsx",
-    "ams_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_Scores.xlsx"
+    "ams_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_Scores.xlsx",
+
+    "amsin_upload_feedback": "cypress/fixtures/UploadFeedback/AMSIN_InterviewNewFeedbackTemplate.xlsx",
+    "ams_upload_feedback": "cypress/fixtures/UploadFeedback/AMS_InterviewNewFeedbackTemplate.xlsx"
 }
