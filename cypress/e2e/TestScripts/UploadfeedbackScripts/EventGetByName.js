@@ -48,6 +48,15 @@ export class EventNameGetBy{
 
             feedback.new_form_interview_stage(event.new_form_stage)
             feedback.upload_file(feedback_excel)
+            feedback.upload_button()
+            feedback.refresh_bg_task()
         })
+    }
+
+    uploadcount_validation(){
+        feedback.upload_info()
+        feedback.success_count()
+        feedback.failure_count()
+        feedback.Close()
     }
 }

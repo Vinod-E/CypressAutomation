@@ -38,3 +38,17 @@ describe('Upload Interview Feedback', ()=> {
         eve.schdeuleFeedback()
     })
 })
+
+describe('Success and Failure Count', ()=> {
+
+    it('Success and Failure Upload Count', ()=>{
+        eve.uploadcount_validation()
+    })
+})
+
+describe('CRPO Logout from App', function(){
+
+    it('Logged Out from CRPO', ()=> {
+        crpo_login.logoutCRPO()
+    })
+})
