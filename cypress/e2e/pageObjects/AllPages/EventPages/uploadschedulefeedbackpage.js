@@ -36,11 +36,14 @@ export class FeedbackUpload{
     }
 
     refresh_bg_task(){
-        cy.get(this.refresh_xpath, {timeout:100000}).first().click()
-        load.UIPageCRPO()
-        cy.wait(2000)
-        cy.get(this.child_refresh_class).last().click()
-        load.UIPageCRPO()
+
+        for (let i=0; i<3; i++){
+            cy.get(this.refresh_xpath, {timeout:100000}).first().click()
+            load.UIPageCRPO()
+            cy.wait(2000)
+            cy.get(this.child_refresh_class).last().click()
+            load.UIPageCRPO()
+        }
     }
 
     upload_info(){
