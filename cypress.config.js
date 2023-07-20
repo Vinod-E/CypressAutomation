@@ -19,6 +19,10 @@ module.exports = defineConfig({
     experimentalOriginDependencies: true,
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
+    waitForAnimations: false,
+    // animationDistanceThreshold: 5,
+    scrollBehavior: "center",
+    chromeWebSecurity: true,
     
     setupNodeEvents(on, config) {
       // implement node event listeners here

@@ -18,6 +18,7 @@ export class AdvanceSearch{
 
     Filter(){
         cy.get(this.filter_id).click()
+        load.UIPageCRPO()
     }
     Email(email){
         cy.get(this.email_search_xpath).type(email)
