@@ -12,9 +12,12 @@ export class GmailLoginPage{
             cy.fixture('ADFS_MFA_Data').then(function (login) {
                 cy.get('body').type(login.gmail_username);
                 cy.get('#identifierNext > .VfPpkd-dgl2Hf-ppHlrf-sM5MNb > .VfPpkd-LgbsSe > .VfPpkd-vQzf8d').click();
-                Cypress.on('uncaught:exception', err => !err.message.includes('ResizeObserver loop limit exceeded'))
                 cy.get('input[name="password"]').type(login.gmail_password);
                 cy.get('#passwordNext > .VfPpkd-dgl2Hf-ppHlrf-sM5MNb > .VfPpkd-LgbsSe > .VfPpkd-vQzf8d').click();
+                cy.on('uncaught:exception', (err, runnable) => {
+                    console.error('Google Login -> uncaught:exception', err);
+                    return false;
+                  });
                 cy.wait(10000)
             })
         })

@@ -15,14 +15,13 @@ module.exports = defineConfig({
   e2e: {
 
     testIsolation: false,
-    chromeWebSecurity: false,
+    chromeWebSecurity: true,
     experimentalOriginDependencies: true,
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
     waitForAnimations: false,
     // animationDistanceThreshold: 5,
     scrollBehavior: "center",
-    chromeWebSecurity: true,
     
     setupNodeEvents(on, config) {
       // implement node event listeners here
