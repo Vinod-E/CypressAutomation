@@ -31,20 +31,20 @@ Cypress.Commands.add('postToken', () => {
     cy.fixture('CRPO_MFA_Data').then(function (login) {
         let env = Cypress.env('ENV')
         if (env == 'amsin'){var url = login.amsin_login_api;
-                            var user = login.amsin_non_mfa_user_name;
-                            var pwd = login.amsin_non_mfa_pwd;
+                            var user = login.amsin_admin;
+                            var pwd = login.amsin_admin_pwd;
                             var tenant = login.amsin_mfa_tenant}
         else if (env == 'beta'){var url = login.beta_login_api;
-                            var user = login.ams_non_mfa_user_name;
-                            var pwd = login.ams_non_mfa_pwd;
+                            var user = login.ams_admin;
+                            var pwd = login.ams_admin_pwd;
                             var tenant = login.ams_mfa_tenant}
         else if (env == 'ams'){var url = login.ams_login_api;
-                            var user = login.ams_non_mfa_user_name;
-                            var pwd = login.ams_non_mfa_pwd;
+                            var user = login.ams_admin;
+                            var pwd = login.ams_admin_pwd;
                             var tenant = login.ams_mfa_tenant}
         else {var url = login.amsin_login_api;
-                            var user = login.amsin_non_mfa_user_name;
-                            var pwd = login.amsin_non_mfa_pwd;
+                            var user = login.amsin_admin;
+                            var pwd = login.amsin_admin_pwd;
                             var tenant = login.amsin_mfa_tenant}
 
         cy.request({
@@ -68,20 +68,20 @@ Cypress.Commands.add('ADFSpostToken', () => {
     cy.fixture('ADFS_MFA_Data').then(function (login) {
         let env = Cypress.env('ENV')
         if (env == 'amsin'){var url = login.amsin_login_api;
-                            var user = login.amsin_non_adfs_mfa_user_name;
-                            var pwd = login.amsin_non_adfs_mfa_pwd;
+                            var user = login.amsin_admin;
+                            var pwd = login.amsin_admin_pwd;
                             var tenant = login.amsin_adfs_mfa_tenant}
         else if (env == 'beta'){var url = login.beta_login_api;
-                            var user = login.ams_non_adfs_mfa_user_name;
-                            var pwd = login.ams_non_adfs_mfa_pwd;
+                            var user = login.ams_admin;
+                            var pwd = login.ams_admin_pwd;
                             var tenant = login.ams_adfs_mfa_tenant}
         else if (env == 'ams'){var url = login.ams_login_api;
-                            var user = login.ams_non_adfs_mfa_user_name;
-                            var pwd = login.ams_non_adfs_mfa_pwd;
+                            var user = login.ams_admin;
+                            var pwd = login.ams_admin_pwd;
                             var tenant = login.ams_adfs_mfa_tenant}
         else {var url = login.amsin_login_api;
-                            var user = login.amsin_non_adfs_mfa_user_name;
-                            var pwd = login.amsin_non_adfs_mfa_pwd;
+                            var user = login.amsin_admin;
+                            var pwd = login.amsin_admin_pwd;
                             var tenant = login.amsin_adfs_mfa_tenant}
 
         cy.request({
