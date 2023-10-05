@@ -71,7 +71,7 @@ export class CRPOLoginPage{
 
     logOut(){
         cy.get(this.logout_id).click()
-        cy.wait(500)
+        cy.wait(1000)
     }
 
     Otp_field(OTP){
