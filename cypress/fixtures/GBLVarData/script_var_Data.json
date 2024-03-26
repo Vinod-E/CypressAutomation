@@ -17,5 +17,9 @@
     "ams_scores": "cypress/fixtures/UploadScores/Ams_CandidateTemplate_Scores.xlsx",
 
     "amsin_upload_feedback": "cypress/fixtures/UploadFeedback/AMSIN_InterviewNewFeedbackTemplate.xlsx",
-    "ams_upload_feedback": "cypress/fixtures/UploadFeedback/AMS_InterviewNewFeedbackTemplate.xlsx"
+    "ams_upload_feedback": "cypress/fixtures/UploadFeedback/AMS_InterviewNewFeedbackTemplate.xlsx",
+
+    "amsin_upload_candidate": "/home/vinod/hirepro_automation/CypressAutomation/cypress/fixtures/SAApplicant/candidateUpload.xls",
+    "beta_upload_candidate": "/home/vinod/hirepro_automation/CypressAutomation/cypress/fixtures/SAApplicant/candidateUpload.xls",
+    "ams_upload_candidate": "/home/vinod/hirepro_automation/CypressAutomation/cypress/fixtures/SAApplicant/candidateUpload.xls"
 }

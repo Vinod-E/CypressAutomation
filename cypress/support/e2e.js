@@ -71,4 +71,20 @@ Cypress.Commands.add('GobalVariables', () => {
             cy.setLocalStorage("feedback_file", gobalVar.amsin_upload_feedback);
         }
     })
+
+    cy.fixture('GBLVarData/script_var_Data.json').then(function(gobalVar){
+        let env = Cypress.env('ENV')
+        if (env == 'amsin'){
+            cy.setLocalStorage("upload candidate", gobalVar.amsin_upload_candidate);
+        }
+        else if (env == 'beta'){
+            cy.setLocalStorage("upload candidate file", gobalVar.beta_upload_candidate);
+        }
+        else if (env == 'ams'){
+            cy.setLocalStorage("upload candidate file", gobalVar.ams_upload_candidate);
+        }
+        else {
+            cy.setLocalStorage("upload candidate file", gobalVar.amsin_upload_candidate);
+        }
+    })
 })
