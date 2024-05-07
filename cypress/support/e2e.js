@@ -75,7 +75,7 @@ Cypress.Commands.add('GobalVariables', () => {
     cy.fixture('GBLVarData/script_var_Data.json').then(function(gobalVar){
         let env = Cypress.env('ENV')
         if (env == 'amsin'){
-            cy.setLocalStorage("upload candidate", gobalVar.amsin_upload_candidate);
+            cy.setLocalStorage("upload candidate file", gobalVar.amsin_upload_candidate);
         }
         else if (env == 'beta'){
             cy.setLocalStorage("upload candidate file", gobalVar.beta_upload_candidate);

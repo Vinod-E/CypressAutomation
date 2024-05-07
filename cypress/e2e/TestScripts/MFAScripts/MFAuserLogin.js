@@ -51,9 +51,11 @@ export class CRPO_MFALogin{
                 cy.visit(login.amsin)
                 if (type == 'MFA'){
                     this.details.loginDetails(login.amsin_mfa_tenant, login.amsin_mfa_user_name, login.amsin_mfa_pwd)
+                    cy.wait(2000)
                 }
                 else{
                     this.details.loginDetails(login.amsin_mfa_tenant, login.amsin_non_mfa_user_name, login.amsin_non_mfa_pwd)
+                    cy.wait(2000)
                 }
             }
         })
