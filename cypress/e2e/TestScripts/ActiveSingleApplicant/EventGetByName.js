@@ -50,7 +50,7 @@ export class EventNameGetBy{
 
     uploadCandidateONE(){
         //Get data from local storage 
-        var file = localStorage.getItem("upload candidate")
+        var file = localStorage.getItem("upload candidate file")
         var rnum = localStorage.getItem("random_number")
 
         // Customized candidate name
@@ -75,7 +75,7 @@ export class EventNameGetBy{
 
     uploadCandidateTWO(){
         //Get data from local storage 
-        var file = localStorage.getItem("upload candidate")
+        var file = localStorage.getItem("upload candidate file")
         var rnum = localStorage.getItem("random_number")
 
         // Customized candidate name

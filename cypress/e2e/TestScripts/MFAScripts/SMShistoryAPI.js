@@ -41,14 +41,17 @@ export class SMSAPIcallhistory{
                     },
                     body: {
                         Paging: {
-                        EntriesInOnePage: 1,
+                        EntriesInOnePage: 10000,
                         PageIndexDesired: 1,
-                        isCountRequired: false
-                        }
+                        isCountRequired: true,
+                        },
+                        "mobilenumber":9966790135,
+                        "messagelike": "is your OTP for portal login."
                     }
                 }).then(Response => {
-                    var Message = Response.body.data.Result.SMSDetails;
-                    OTP = Message[0].SMSMessage.split(" ")[0]
+                    var Message = Cypress._.chain(Response).get('body.data.Result.SMSDetails').last().value();
+                    // console.log(Cypress._.chain(Response).get('body.data.Result.SMSDetails').last().value())
+                    OTP = Message.SMSMessage.split(" ")[0]
                     cy.setLocalStorage("MFA_OTP", OTP);
                     console.log("SMS history api otp:: " + OTP)
                     otp_verify.otp_screen(OTP)
@@ -78,14 +81,16 @@ export class SMSAPIcallhistory{
                     },
                     body: {
                         Paging: {
-                        EntriesInOnePage: 1,
+                        EntriesInOnePage: 10000,
                         PageIndexDesired: 1,
                         isCountRequired: false
-                        }
+                        },
+                        "mobilenumber":9966790135,
+                        "messagelike": "is your OTP for portal login."
                     }
                 }).then(Response => {
-                    var Message = Response.body.data.Result.SMSDetails;
-                    OTP = Message[0].SMSMessage.split(" ")[0]
+                    var Message = Cypress._.chain(Response).get('body.data.Result.SMSDetails').last().value();
+                    OTP = Message.SMSMessage.split(" ")[0]
                     cy.setLocalStorage("MFA_OTP", OTP);
                     console.log("ADFS SMS history api otp:: " + OTP)
                     otp_verify.otp_screen(OTP)
