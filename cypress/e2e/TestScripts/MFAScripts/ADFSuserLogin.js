@@ -59,6 +59,7 @@ export class ADFS_EMail_MFALogin{
                 }
             }   
 
+            cy.wait(2000)
             cy.visit(url)
             this.details.loginDetails(tenant, username, password)
         })
@@ -89,6 +90,7 @@ export class ADFS_EMail_MFALogin{
                 var password = login.gmail_password;
             }
 
+            cy.wait(2000)
             cy.visit(url)
             this.details.ADFS_loginDetails(tenant, username, password)
             gmail.google_accounts()

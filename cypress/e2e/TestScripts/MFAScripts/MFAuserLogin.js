@@ -18,6 +18,7 @@ export class CRPO_MFALogin{
             this.details = new CRPO_MFALogin() // Current class instance
 
             if (env == 'amsin'){
+                cy.wait(2000)
                 cy.visit(login.amsin)
                 if (type == 'MFA'){
                     this.details.loginDetails(login.amsin_mfa_tenant, login.amsin_mfa_user_name, login.amsin_mfa_pwd)
@@ -28,6 +29,7 @@ export class CRPO_MFALogin{
             }
 
             else if (env == 'ams'){
+                cy.wait(2000)
                 cy.visit(login.ams)
                 if (type == 'MFA'){
                     this.details.loginDetails(login.ams_mfa_tenant, login.ams_mfa_user_name, login.ams_mfa_pwd)
@@ -38,6 +40,7 @@ export class CRPO_MFALogin{
             }
 
             else if (env == 'beta'){
+                cy.wait(2000)
                 cy.visit(login.beta)
                 if (type == 'MFA'){
                     this.details.loginDetails(login.ams_mfa_tenant, login.ams_mfa_user_name, login.ams_mfa_pwd)
@@ -48,6 +51,7 @@ export class CRPO_MFALogin{
             }
 
             else{
+                cy.wait(2000)
                 cy.visit(login.amsin)
                 if (type == 'MFA'){
                     this.details.loginDetails(login.amsin_mfa_tenant, login.amsin_mfa_user_name, login.amsin_mfa_pwd)
