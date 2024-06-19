@@ -69,7 +69,7 @@ export class MakeInterviewerAvailablity{
             var email = this.email.email.concat(date,r_num, '@gmail.com')
 
             search.Filter()
-            search.Email(email)
+            search.Emails(email)
             search.button_search()
             checkbox.select_all_checkbox()
             interviewer.markPreference()

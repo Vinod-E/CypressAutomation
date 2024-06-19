@@ -11,6 +11,7 @@ export class AdvanceSearch{
     // ******* -------- Locator Variables -------- *******
     filter_id = '#cardlist-view-filter'
     email_search_xpath = 'input[name="email"]'
+    emails_search_xpath = 'input[name="emails"]'
     search_button_xpath = 'button[ng-click="vm.apply();$hide();"]'
     user_email_xpath = 'input[name="Email"]'
     event_name_xpath = '[placeholder="Event Name"]'
@@ -22,6 +23,9 @@ export class AdvanceSearch{
     }
     Email(email){
         cy.get(this.email_search_xpath).type(email)
+    }
+    Emails(emails){
+        cy.get(this.emails_search_xpath).type(emails)
     }
     UserEmail(email){
         cy.get(this.user_email_xpath).type(email)
