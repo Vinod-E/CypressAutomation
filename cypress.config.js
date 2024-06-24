@@ -17,6 +17,7 @@ module.exports = defineConfig({
     testIsolation: false,
     chromeWebSecurity: true,
     experimentalOriginDependencies: true,
+    experimentalModifyObstructiveThirdPartyCode: true,
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
     waitForAnimations: false,
