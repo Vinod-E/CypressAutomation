@@ -1,0 +1,28 @@
+Common_Login_Data.json
+
+Above json file is an ignore file. 
+In below i have given format to recreate the file incase of lost data
+
+
+{
+  
+    "body": "Fixtures are a great way to mock data for responses to routes",
+    "amsin": "****************",
+    "beta": "****************",
+    "ams": "****************",
+
+  
+    "-----------Login Credentials-------": "----------------------------------",
+    "username": "****************",
+    
+    "qa_tenant": "****************",
+    "qa_pwd": "****************",
+  
+    "live_tenant": "****************",
+    "live_pwd": "****************",
+
+    "hackaton_tenant": "****************",
+    "qa_hackathon_pwd": "****************",
+    "live_hacakton_pwd": ""
+    
+  }

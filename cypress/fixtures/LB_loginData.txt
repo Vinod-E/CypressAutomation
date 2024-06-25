@@ -1,0 +1,41 @@
+LB_loginData.json
+
+Above json file is an ignore file. 
+In below i have given format to recreate the file incase of lost data
+
+
+{
+  
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "amsin": "***********",
+  "beta": "***********",
+  "ams": "***********",
+
+
+  "----------------Feedback Link-----------------": "---------------------------------",
+  "qa_feedback_url": "***********",
+  "beta_feedback_url": "***********"",
+  "live_feedback_url": "***********"",
+  "submit_feed_link": "//submit/",
+
+
+  "-----------Lender/Borrower Credentials-------": "----------------------------------",
+  "username": "***********",
+  
+  "qa_tenant": "***********",
+  "qa_pwd": "***********",
+
+  "qa_lender_tenant": "***********",
+  "qa_lender_pwd": "***********",
+
+  "live_tenant": "***********",
+  "live_pwd": "***********",
+
+  "live_lender_tenant": "***********",
+  "live_lender_pwd": "***********",
+
+  "int_username": "***********",
+  "qa_lender_int_pwd": "***********",
+  "live_lender_int_pwd": "***********""
+
+}
