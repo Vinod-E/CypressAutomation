@@ -1,0 +1,48 @@
+CRPO_MFA_Data.json
+
+Above json file is an ignore file. 
+In below i have given format to recreate the file incase of lost data
+
+{
+  
+    "body": "Fixtures are a great way to mock data for responses to routes",
+    "amsin": "**********",
+    "beta": "**********",
+    "ams": "**********",
+
+  "---------------MAIN USER----------------------": "------------------------------------",
+  "amsin_tenant": "**********",
+  "amsin_admin": "**********",
+  "amsin_admin_pwd": "**********",
+
+  "ams_tenant": "**********",
+  "ams_admin": "**********",
+  "ams_admin_pwd": "**********",
+
+  "---------------MFA USER----------------------": "------------------------------------",
+  "amsin_mfa_tenant": "**********",
+  "amsin_mfa_user_name": "**********",
+  "amsin_mfa_pwd": "**********",
+  
+  "ams_mfa_tenant": "**********",
+  "ams_mfa_user_name": "**********",
+  "ams_mfa_pwd": "**********",
+
+
+  "---------------NON MFA USER----------------------": "------------------------------------",
+  "amsin_non_mfa_user_name": "**********",
+  "amsin_non_mfa_pwd": "**********",
+  
+  "ams_non_mfa_user_name": "**********",
+  "ams_non_mfa_pwd": "**********",
+  
+  
+  "----------------APIS------------------------------": "------------------------------------",
+  "amsin_login_api": "**********",
+  "beta_login_api": "**********",
+  "ams_login_api": "**********",
+  "amsin_sms_history_api": "**********",
+  "beta_sms_history_api": "**********",
+  "ams_sms_history_api": "**********"
+  }
+  
