@@ -4,5 +4,7 @@ cypress/fixtures/ADFS_MFA_Data.json
 cypress/fixtures/CRPO_MFA_Data.json
 cypress/fixtures/Common_Login_Data.json
 cypress/fixtures/LB_loginData.json
+cypress/fixtures/ABACUS_Data.json
+# cypress/fixtures/*.json
 node_modules
 package-lock.json

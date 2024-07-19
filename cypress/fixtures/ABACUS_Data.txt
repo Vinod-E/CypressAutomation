@@ -1,0 +1,40 @@
+{
+
+  
+    "body": "Fixtures are a great way to mock data for responses to routes",
+    "amsin": "",
+    "beta": "",
+    "ams": "",
+
+  "---------------Email----------------------": "------------------------------------",
+   "interviewer_email": "",
+  "interviewer_pwd": "",
+  "candidate_email": "",
+  "candidate_pwd": "",
+  "candidate_abacus_id": "",
+  "stage": "",
+
+  "---------------MAIN USER----------------------": "------------------------------------",
+  "amsin_client_id": "",
+  "amsin_client_secret": "",
+
+  "beta_client_id": "",
+  "beta_client_secret": "",
+
+  "ams_client_id": "",
+  "ams_client_secret": "",
+
+    "----------------APIS------------------------------": "------------------------------------",
+    "amsin_abacus_login_api": "",
+    "beta_abacus_login_api": "",
+    "ams_abacus_login_api": "",
+
+    "amsin_schedule_api": "",
+    "beta_schedule_api": "",
+    "ams_schedule_api": "",
+
+    "amsin_cancel_api": "",
+    "beta_cancel_api": "",
+    "ams_cancel_api": ""
+}
+  
