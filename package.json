@@ -29,8 +29,11 @@
 
     "amsin_saa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome",
     "beta_saa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome",
-    "ams_saa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome"
-    
+    "ams_saa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome",
+
+    "amsin_sso": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/SSO_Interviewer_Candidate.cy.js' --headed --browser electron",
+    "ams_sso": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SSO_Interviewer_Candidate.cy.js' --headed --browser electron"  
+
   },
   "keywords": [],
   "author": "Eraganaboina Vinod Kumar",

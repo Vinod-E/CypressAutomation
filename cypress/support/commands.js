@@ -101,6 +101,33 @@ Cypress.Commands.add('ADFSpostToken', () => {
     })
 })
 
+Cypress.Commands.add('ABACUSToken', () => {
+    cy.fixture('ABACUS_Data').then(function (login) {
+        let env = Cypress.env('ENV')
+        if (env == 'amsin'){var url = login.amsin_abacus_login_api;
+                            var id = login.amsin_client_id;
+                            var secret = login.amsin_client_secret}
+        else if (env == 'beta'){}
+        else if (env == 'ams'){}
+        else {var url = login.amsin_abacus_login_api;
+              var id = login.amsin_client_id;
+              var secret = login.amsin_client_secret
+            }
+
+        cy.request({
+            method: 'POST',
+            url: url,
+            headers: {},
+            body: {
+                client_id: id,
+                client_secret: secret
+            }
+        }).then(Response => {
+            cy.setLocalStorage("ABACUS_identity_token", Response.body.access_token);
+            console.log('command.js ADFS local stored token:: '+ Response.body.Token)
+        });
+    })
+})
 
 //   cy.request({
 //     method: 'POST',
