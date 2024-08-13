@@ -27,8 +27,17 @@ export class CRPOLoginPage{
     }
 
     vendor_tpo_placecom(){
-        cy.get(this.employee_class).last().click()
+        // debugger
         cy.wait(1000)
+        cy.get(this.employee_class).last().then(($value) => {
+            this.textValue = $value.text()
+            if (this.textValue == 'Vendors/TPO/Placecom'){
+                cy.get(this.employee_class).last().click()
+                cy.wait(1000)
+                cy.log('Text matches expected value');
+            }
+            else return;
+        })
     }
 
     tenantAlias(tenant){

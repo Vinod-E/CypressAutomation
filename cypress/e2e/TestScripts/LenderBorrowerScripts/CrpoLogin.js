@@ -59,6 +59,7 @@ export class CRPOLogin{
     loginDetails(tenant, username, password){
         loginPage.tenantAlias(tenant)
         loginPage.nextToTenant()
+        loginPage.vendor_tpo_placecom()
         loginPage.userName(username)
         loginPage.password(password)
         loginPage.clickSubmit()
