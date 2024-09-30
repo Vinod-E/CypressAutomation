@@ -5,8 +5,8 @@ module.exports = defineConfig({
   video: true,
   reporter: "cypress-email-results",
   "emailResults": {
-    "senderEmail": "vkvini143@gmail.com",
-    "recipientEmail": "vinodkumar.eraganaboina@gmail.com",
+    "senderEmail": "*******",
+    "recipientEmail": "*************",
     "subject": "Cypress Test Results",
     "template": "cypress/pageObjects/template.html",
     "smtp": {
@@ -14,8 +14,8 @@ module.exports = defineConfig({
       "port": 587,
       "secure": false,
       "auth": {
-        "user": "vkvini143@gmail.com",
-        "pass": "lgpm frsa wfed bhbx"
+        "user": "**************",
+        "pass": "****************"
       }
     }
   },
