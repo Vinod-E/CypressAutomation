@@ -5,8 +5,8 @@ module.exports = defineConfig({
   video: true,
   reporter: "cypress-email-results",
   "emailResults": {
-    "senderEmail": "vkvini143@gmail.com",
-    "recipientEmail": "vinodkumar.eraganaboina@gmail.com",
+    "senderEmail": "******************",
+    "recipientEmail": "*****************",
     "subject": "Cypress Test Results",
     "template": "cypress/pageObjects/template.html",
     "smtp": {
