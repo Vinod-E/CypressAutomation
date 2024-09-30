@@ -31,6 +31,12 @@ export class ADFS_EMail_MFALogin{
                     var username = login.ams_non_adfs_mfa_user_name;
                     var password = login.ams_non_adfs_mfa_pwd;
                 }
+                else if (env == 'beta'){
+                    var url = login.beta;
+                    var tenant = login.ams_adfs_mfa_tenant;
+                    var username = login.ams_non_adfs_mfa_user_name;
+                    var password = login.ams_non_adfs_mfa_pwd;
+                }
                 else {
                     var url = login.amsin;
                     var tenant = login.amsin_adfs_mfa_tenant;
@@ -47,6 +53,12 @@ export class ADFS_EMail_MFALogin{
                 }
                 else if (env == 'ams'){
                     var url = login.ams;
+                    var tenant = login.ams_adfs_mfa_tenant;
+                    var username = login.ams_adfs_mfa_user_name;
+                    var password = login.ams_adfs_mfa_pwd;
+                }
+                else if (env == 'beta'){
+                    var url = login.beta;
                     var tenant = login.ams_adfs_mfa_tenant;
                     var username = login.ams_adfs_mfa_user_name;
                     var password = login.ams_adfs_mfa_pwd;
@@ -79,6 +91,12 @@ export class ADFS_EMail_MFALogin{
             }
             else if (env == 'ams'){
                 var url = login.ams;
+                var tenant = login.ams_adfs_mfa_tenant;
+                var username = login.gmail_username;
+                var password = login.gmail_password;
+            }
+            else if (env == 'beta'){
+                var url = login.beta;
                 var tenant = login.ams_adfs_mfa_tenant;
                 var username = login.gmail_username;
                 var password = login.gmail_password;

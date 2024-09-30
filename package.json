@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "amsin": "cypress run  --env ENV=amsin  --browser chrome",
+    "amsin": "cypress run  --env ENV=amsin  --browser electron",
     "beta": "cypress run  --env ENV=beta  --browser chrome",
     "ams": "cypress run  --env ENV=ams  --browser chrome",
 
@@ -22,9 +22,11 @@
     "ams_uf": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/BulkScheduleFeedback.cy.js'  --headed --browser chrome",
    
     "amsin_mfa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser electron",
+    "beta_mfa": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser electron",
     "ams_mfa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/MFA_TwostepVerification.cy.js' --headed --browser electron",
     
     "amsin_adfs": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/ADFS_E2E_Regression.cy.js' --headed --browser electron",
+    "beta_adfs": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/ADFS_E2E_Regression.cy.js' --headed --browser electron",
     "ams_adfs": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/ADFS_E2E_Regression.cy.js' --headed --browser electron",
 
     "amsin_saa": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome",
@@ -32,19 +34,26 @@
     "ams_saa": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SingleActiveApplicant.cy.js' --headed --browser chrome",
 
     "amsin_sso": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/SSO_Interviewer_Candidate.cy.js' --headed --browser electron",
-    "ams_sso": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SSO_Interviewer_Candidate.cy.js' --headed --browser electron"  
-
+    "ams_sso": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/SSO_Interviewer_Candidate.cy.js' --headed --browser electron",
+ 
+    "amsin_lr": "cypress run  --env ENV=amsin  --spec 'cypress/e2e/TestSuite/CRPO_Login_Restricted.cy.js' --headed --browser chrome",
+    "beta_lr": "cypress run  --env ENV=beta  --spec 'cypress/e2e/TestSuite/CRPO_Login_Restricted.cy.js' --headed --browser chrome",
+    "ams_lr": "cypress run  --env ENV=ams  --spec 'cypress/e2e/TestSuite/CRPO_Login_Restricted.cy.js' --headed --browser chrome"
   },
   "keywords": [],
   "author": "Eraganaboina Vinod Kumar",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.17.4",
+    "cypress-email-results": "^1.8.0",
     "cypress-localstorage-commands": "^2.2.2",
     "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-multi-reporters": "^1.6.4",
     "cypress-wait-until": "^1.7.2",
     "cypress-xpath": "^2.0.1",
-    "node-xlsx": "^0.4.0"
+    "mocha": "^10.7.3",
+    "node-xlsx": "^0.4.0",
+    "nodemailer": "^6.9.14"
   },
   "dependencies": {
     "jsonpath": "^1.1.1",

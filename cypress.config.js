@@ -3,6 +3,23 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 
   video: true,
+  reporter: "cypress-email-results",
+  "emailResults": {
+    "senderEmail": "vkvini143@gmail.com",
+    "recipientEmail": "vinodkumar.eraganaboina@gmail.com",
+    "subject": "Cypress Test Results",
+    "template": "cypress/pageObjects/template.html",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "secure": false,
+      "auth": {
+        "user": "vkvini143@gmail.com",
+        "pass": "lgpm frsa wfed bhbx"
+      }
+    }
+  },
+
   reporter: 'cypress-mochawesome-reporter',
   "reporterOptions": {
      "embeddedScreenshots": true,

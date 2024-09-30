@@ -31,6 +31,12 @@ export class ADFS_EMail_Login{
                 var username = login.gmail_username;
                 var password = login.gmail_password;
             }
+            else if (env == 'beta'){
+                var url = login.beta;
+                var tenant = login.ams_adfs_mfa_tenant;
+                var username = login.gmail_username;
+                var password = login.gmail_password;
+            }
             else {
                 var url = login.amsin;
                 var tenant = login.amsin_adfs_mfa_tenant;
