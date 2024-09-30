@@ -14,8 +14,8 @@ module.exports = defineConfig({
       "port": 587,
       "secure": false,
       "auth": {
-        "user": "vkvini143@gmail.com",
-        "pass": "lgpm frsa wfed bhbx"
+        "user": "***********",
+        "pass": "************"
       }
     }
   },
