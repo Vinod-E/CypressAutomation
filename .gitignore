@@ -8,3 +8,5 @@ cypress/fixtures/ABACUS_Data.json
 # cypress/fixtures/*.json
 node_modules
 package-lock.json
+cypress/reports/html/index_*.html
+cypress/reports/html/*.html

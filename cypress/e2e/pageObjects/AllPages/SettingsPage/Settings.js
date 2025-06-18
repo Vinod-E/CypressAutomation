@@ -9,7 +9,7 @@ export class SettingsPage{
 
 
     // ******* -------- Locator Variables -------- *******
-    user_settings_class = '.fa.fa-fw.fa-cog'
+    user_settings_class = '[ng-if="vm.processedUserName"]'
     settings_id = '#crpo-common-settings'
 
 

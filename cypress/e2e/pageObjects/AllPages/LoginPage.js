@@ -14,7 +14,7 @@ export class CRPOLoginPage{
     username_xpath = '[name="loginName"]'
     pasword_xpath = '[type="password"]'
     login_button_xpath = '[ng-click="vm.login()"]'
-    click_username_xpath = '[class="fa fa-fw fa-cog"]'
+    click_username_xpath = '[ng-if="vm.processedUserName"]'
     logout_id = '#crpo-settings-logout'
     otp_field_class = 'form.ng-pristine > :nth-child(2) > .form-control'
     verify_button_class = '.btn-primary'

@@ -17,7 +17,8 @@ export class FeedbackPage{
     comment1_xpath = '(//*[@ng-model="data"])[1]'
     comment2_xpath = '(//*[@ng-model="data"])[2]'
     decision_xpath = '(//*[@class="ng-scope select-decision-box"])[1]'
-    overall_commnet_xpath = '[placeholder="Comments if any..."]'
+    overall_commnet_xpath = '[ng-model="vm.finalTranscript"]'
+    // overall_commnet_xpath = '[placeholder="Comments if any..."]'
     submit_xpath = '[ng-if="vm.data.configs.isSubmitAllowed"]'
 
 
